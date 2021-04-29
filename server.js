@@ -1,12 +1,13 @@
 //___________________
 //Dependencies
 //___________________
+require("dotenv").config();
 const express = require("express");
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 const app = express();
 const db = mongoose.connection;
-require("dotenv").config();
+const session = require("express-session");
 
 //___________________
 //Port
@@ -47,14 +48,32 @@ app.use(express.json()); // returns middleware that only parses JSON - may or ma
 
 //use method override
 app.use(methodOverride("_method")); // allow POST, PUT and DELETE from a form
+app.use(
+  session({
+    secret: process.env.SECRET, //a random string do not copy this value or your stuff will get hacked
+    resave: false, // default more info: https://www.npmjs.com/package/express-session#resave
+    saveUninitialized: false, // default  more info: https://www.npmjs.com/package/express-session#resave
+  })
+);
+
+// ==============================
+// ========= CONTROLLERS ========
+// ==============================
+const productController = require("./controllers/main_controller.js");
+app.use("/", productController);
+
+const userController = require("./controllers/users_controller.js");
+app.use("/users", userController);
+const sessionController = require("./controllers/sessions_controller.js");
+app.use("/sessions", sessionController);
 
 //___________________
 // Routes
 //___________________
 //localhost:3000
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+// app.get("/", (req, res) => {
+//   res.send("Hello World!");
+// });
 
 //___________________
 //Listener

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="/css/index.css">
+
+      <!-- <script
+        src="https://code.jquery.com/jquery-3.5.1.min.js"
+        charset="utf-8"
+      ></script> -->
+
+    <script src="app.js" charset="utf-8"></script>
+
+  </head>
+
+  <head>
+    <div class="head">
+      <h1>ReviewT</h1>
+      <h2>Logged in as <%= currentUser.username %></h2>
+      <a href="/myprofile"><img src="<%= currentUser.img %>" alt=""></a> 
+    </div>
+    <nav>
+      <form action="/sessions?_method=DELETE" method="post">
+        <input type="submit" name="" value="Log Out" class= ''>
+      </form>
+    </nav>
+
+    <a href="/new">POST</a>
+  </head>
+
+  <body>
+
+    <div class="product-container">
+
+      <% for (let i = 0; i < review.length; i++ ) {%>
+
+        <div class="items-container">
+        <h1><a href="/"><%= review[i].name %></a></h1>
+        <h2><%= review[i].title %></h2>
+        <img class='product-img' src="<%= review[i].img %>" alt="">
+        <h4>$<%= review[i].price %></h4>
+        <p><%= review[i].description %></p>
+        <h5>Recommend? <%= review[i].recommend %></h5>
+        <h5>Bought at: <%= review[i].boughtAt %></h5>
+        </div>
+      <% } %>
+
+    </div>
+
+
+
+
+  </body>
+
+</html>

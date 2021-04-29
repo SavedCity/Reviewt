@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>SIGN IN</h1>
+    <form action="/sessions" method="POST">
+
+        <div class="container">
+          <label for="name"></label>
+          <input placeholder="USER NAME" class='items' type="text" name="username" required/>
+          <label for="pass"></label>
+          <input class='items' type="password" name="password" placeholder="PASSWORD" required/>
+          <br>
+          <input class='submit' type="submit" value="LOG IN">
+        </div>
+
+    </form>
+
+    <h3>Not a ReviewT member? Sign up now!</h3>
+    <a href="/users/signup">SIGN UP</a>
+
+  </body>
+</html>
