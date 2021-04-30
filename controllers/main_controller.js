@@ -15,27 +15,6 @@ const authenticated = (req, res, next) => {
 };
 
 // ===============================
-// ======== INDEX ================
-// ===============================
-product.get("/", authenticated, (req, res) => {
-  Review.find({}, (err, findAll) => {
-    res.render("index.ejs", {
-      review: findAll,
-      currentUser: req.session.currentUser,
-    });
-  });
-});
-
-// ===============================
-// ======== PROFILE ==============
-// ===============================
-product.get("/myprofile", (req, res) => {
-  res.render("profile.ejs", {
-    profile: req.session.currentUser,
-  });
-});
-
-// ===============================
 // ======== NEW ==================
 // ===============================
 product.get("/new", (req, res) => {
@@ -55,6 +34,77 @@ product.post("/", (req, res) => {
       console.log(createdReview);
       res.redirect("/");
     }
+  });
+});
+
+// ===============================
+// ======== PROFILE ==============
+// ===============================
+product.get("/profile", (req, res) => {
+  res.render("profile.ejs", {
+    profile: req.session.currentUser,
+  });
+});
+
+// ===============================
+// ======== EDIT =================
+// ===============================
+product.get("/:id/edit", (req, res) => {
+  Review.findById(req.params.id, (err, foundReview) => {
+    res.render("edit.ejs", {
+      item: foundReview,
+    });
+  });
+});
+
+// ===============================
+// ======== DELETE ===============
+// ===============================
+product.delete("/:id", (req, res) => {
+  Review.findByIdAndDelete(req.params.id, (err, remove) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(remove);
+    }
+    res.redirect("/");
+  });
+});
+
+// ===============================
+// ======== SHOW =================
+// ===============================
+product.get("/:id", (req, res) => {
+  Review.findById(req.params.id, (err, foundReview) => {
+    res.render("show.ejs", {
+      item: foundReview,
+    });
+  });
+});
+
+// ===============================
+// ======== UPDATE ===============
+// ===============================
+product.put("/:id", (req, res) => {
+  if (req.body.recommend === "on") {
+    req.body.recommend = "Yes";
+  } else {
+    req.body.recommend = "No";
+  }
+  Review.findByIdAndUpdate(req.params.id, req.body, (err, update) => {
+    res.redirect("/" + req.params.id);
+  });
+});
+
+// ===============================
+// ======== INDEX ================
+// ===============================
+product.get("/", authenticated, (req, res) => {
+  Review.find({}, (err, findAll) => {
+    res.render("index.ejs", {
+      review: findAll,
+      currentUser: req.session.currentUser,
+    });
   });
 });
 

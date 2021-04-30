@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>UPDATE A PRODUCT!</h1>
+
+    <form class="" action="/<%=item._id%>?_method=PUT" method="post">
+
+      <input class = 'items' type="text" name='name' value="<%=item.name%>" placeholder='NAME'>
+      <input class = 'items' type="text" name="title" value="<%=item.title%>" placeholder='TITLE'>
+      <input class = 'items' type="text" name="price" value="<%=item.price%>" placeholder='PRICE'>
+      <input class = 'items' type="text" name="description" value="<%=item.description%>" placeholder='DESCRIPTION OF THE PRODUCT'>
+
+      <input class = 'items' type="text" name="boughtAt" value="<%=item.boughtAt%>" placeholder="PLACE OF PURCHASE">
+      <input class= 'items' type="text" name="img" value="<%=item.img%>" placeholder="IMG URL">
+      <h3>Recommend to a friend? <input class = 'items' type="checkbox" name="recommend" <% if (item.recommend === 'Yes') { %>
+        checked
+        <% } %>></h3>
+      <input type="submit" name="" value="EDIT">
+    </form>
+  </body>
+</html>
