@@ -7,6 +7,12 @@
   flex-wrap: wrap;
 }
 
+.profile-img {
+  width: 6%;
+  border-radius: 50%;
+  box-shadow: 0 0 3px black;
+}
+
 .items-container {
   display: flex;
   justify-content: center;
