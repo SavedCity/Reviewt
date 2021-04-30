@@ -105,7 +105,6 @@ product.put("/:id", (req, res) => {
     res.redirect("/main/" + req.params.id);
   });
 });
-
 // Review.create(Reviews, (err, created) => {
 //   if (err) {
 //     console.log(err);
