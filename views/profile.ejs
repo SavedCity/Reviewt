@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="/css/profile.css">
   </head>
   <body>
 
-    <h1>My ReviewT Profile</h1>
-
-    <h2><%= profile.username %></h2>
-    <h3><%= profile.name %></h3>
-    <img src="<%= profile.img %>" alt="">
+<div class="container">
+  <h2><%= profile.username %>'s ReviewT Profile</h2>
+  <h3><%= profile.name %></h3>
+  <img class='img' src="<%= profile.img %>" alt="">
+</div>
 
   </body>
 </html>

@@ -26,17 +26,6 @@ product.get("/", authenticated, (req, res) => {
   });
 });
 
-// // ===============================
-// // ======== PROFILE ==============
-// // ===============================
-// product.get("/myprofile", (req, res) => {
-//   User.find({}, (err, findUser) => {
-//     res.render('profile.ejs', {
-//       profile: findUser
-//     })
-//   })
-// });
-
 // ===============================
 // ======== PROFILE ==============
 // ===============================
@@ -60,8 +49,12 @@ product.post("/", (req, res) => {
     req.body.recommend = "No";
   }
   Review.create(req.body, (err, createdReview) => {
-    console.log(createdReview);
-    res.redirect("/");
+    if (createdReview === undefined) {
+      res.redirect("/new");
+    } else {
+      console.log(createdReview);
+      res.redirect("/");
+    }
   });
 });
 

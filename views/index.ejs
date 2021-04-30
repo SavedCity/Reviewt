@@ -18,7 +18,7 @@
     <div class="head">
       <h1>ReviewT</h1>
       <h2>Logged in as <%= currentUser.username %></h2>
-      <a href="/myprofile"><img src="<%= currentUser.img %>" alt=""></a> 
+      <a href="/myprofile"><img class='profile-img' src="<%= currentUser.img %>" alt=""></a> 
     </div>
     <nav>
       <form action="/sessions?_method=DELETE" method="post">
