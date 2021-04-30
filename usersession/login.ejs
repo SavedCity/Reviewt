@@ -3,24 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="/css/signin.css">
   </head>
   <body>
-    <h1>SIGN IN</h1>
-    <form action="/sessions" method="POST">
 
-        <div class="container">
-          <label for="name"></label>
-          <input placeholder="USERNAME" class='items' type="text" name="username" required/>
-          <label for="pass"></label>
-          <input class='items' type="password" name="password" placeholder="PASSWORD" required/>
-          <br>
-          <input class='submit' type="submit" value="LOG IN">
-        </div>
+    <div class="main-container">
+      <h1 class='title'>SIGN IN</h1>
+      <form action="/sessions" method="POST">
 
-    </form>
+          <div class="container">
+            <label for="name"></label>
+            <input placeholder="USERNAME" class='items' type="text" name="username" required/>
+            <label for="pass"></label>
+            <input class='items' type="password" name="password" placeholder="PASSWORD" required/>
+            
+            <input class='submit' type="submit" value="LOG IN">
+          </div>
 
-    <h3>Not a ReviewT member? Sign up now!</h3>
-    <a href="/users/signup">SIGN UP</a>
+      </form>
+
+      <h3>Not a ReviewT member? Sign up now!</h3>
+      <a href="/users/signup">SIGN UP</a>
+    </div>
+
+
 
   </body>
 </html>

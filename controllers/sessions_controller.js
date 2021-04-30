@@ -19,7 +19,7 @@ sessions.post("/", (req, res) => {
     } else {
       if (bcrypt.compareSync(req.body.password, foundUser.password)) {
         req.session.currentUser = foundUser;
-        res.redirect("/");
+        res.redirect("/main");
       } else {
         res.send('<a href="/sessions/signin"> PASSWORD DOES NOT MATCH! </a>');
       }

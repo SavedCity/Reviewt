@@ -14,11 +14,11 @@
 
   </head>
 
-  <head>
+  <header>
     <div class="head">
       <h1>ReviewT</h1>
       <h2>Logged in as <%= currentUser.username %></h2>
-      <a href="/profile"><img class='profile-img' src="<%= currentUser.img %>" alt=""></a>
+      <a href="/main/profile"><img class='profile-img' src="<%= currentUser.img %>" alt=""></a>
     </div>
     <nav>
       <form action="/sessions?_method=DELETE" method="post">
@@ -26,8 +26,8 @@
       </form>
     </nav>
 
-    <a href="/new">POST</a>
-  </head>
+    <a href="/main/new">POST</a>
+  </header>
 
   <body>
 
@@ -36,7 +36,7 @@
       <% for (let i = 0; i < review.length; i++ ) {%>
 
         <div class="items-container">
-        <h1><a href="/<%=review[i]._id%>"><%= review[i].name %></a></h1>
+        <h1><a href="/main/<%=review[i]._id%>"><%= review[i].name %></a></h1>
         <h2><%= review[i].title %></h2>
         <img class='product-img' src="<%= review[i].img %>" alt="">
         <h4>$<%= review[i].price %></h4>

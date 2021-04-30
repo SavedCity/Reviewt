@@ -1,0 +1,32 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.items {
+  border: none;
+  background: #28282855;
+  margin-bottom: 10px;
+  height: 35px;
+  /* color: white; */
+  border-radius: 4px;
+  font-size: 20px;
+  outline: none;
+}
+.submit {
+  height: 35px;
+  border-radius: 4px;
+  font-size: 22px;
+  background: #5a99;
+  border: none;
+  margin-top: 10px;
+}

@@ -32,7 +32,7 @@ product.post("/", (req, res) => {
       res.redirect("/new");
     } else {
       console.log(createdReview);
-      res.redirect("/");
+      res.redirect("/main");
     }
   });
 });
@@ -58,6 +58,27 @@ product.get("/:id/edit", (req, res) => {
 });
 
 // ===============================
+// ======== SHOW =================
+// ===============================
+product.get("/:id", (req, res) => {
+  Review.findById(req.params.id, (err, foundReview) => {
+    res.render("show.ejs", {
+      item: foundReview,
+    });
+  });
+});
+// ===============================
+// ======== INDEX ================
+// ===============================
+product.get("/", authenticated, (req, res) => {
+  Review.find({}, (err, findAll) => {
+    res.render("index.ejs", {
+      review: findAll,
+      currentUser: req.session.currentUser,
+    });
+  });
+});
+// ===============================
 // ======== DELETE ===============
 // ===============================
 product.delete("/:id", (req, res) => {
@@ -67,18 +88,7 @@ product.delete("/:id", (req, res) => {
     } else {
       console.log(remove);
     }
-    res.redirect("/");
-  });
-});
-
-// ===============================
-// ======== SHOW =================
-// ===============================
-product.get("/:id", (req, res) => {
-  Review.findById(req.params.id, (err, foundReview) => {
-    res.render("show.ejs", {
-      item: foundReview,
-    });
+    res.redirect("/main");
   });
 });
 
@@ -92,19 +102,7 @@ product.put("/:id", (req, res) => {
     req.body.recommend = "No";
   }
   Review.findByIdAndUpdate(req.params.id, req.body, (err, update) => {
-    res.redirect("/" + req.params.id);
-  });
-});
-
-// ===============================
-// ======== INDEX ================
-// ===============================
-product.get("/", authenticated, (req, res) => {
-  Review.find({}, (err, findAll) => {
-    res.render("index.ejs", {
-      review: findAll,
-      currentUser: req.session.currentUser,
-    });
+    res.redirect("/main/" + req.params.id);
   });
 });
 

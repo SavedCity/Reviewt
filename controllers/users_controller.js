@@ -20,7 +20,7 @@ users.post("/", (req, res) => {
       res.redirect("/users/signup");
     } else {
       console.log(createdUser);
-      res.redirect("/");
+      res.redirect("/main");
     }
   });
 });

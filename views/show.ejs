@@ -13,9 +13,9 @@
     <h1><%=item.recommend%></h1>
     <h1><%=item.boughtAt%></h1>
 <br>
-    <a href="/<%=item._id%>/edit">EDIT</a>
+    <a href="/main/<%=item._id%>/edit">EDIT</a>
 
-    <form action="/<%=item._id%>?_method=DELETE" method="post">
+    <form action="/main/<%=item._id%>?_method=DELETE" method="post">
       <input class='delete-btn' type="submit" value="REMOVE">
     </form>
   </body>
