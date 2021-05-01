@@ -5,11 +5,11 @@ const itemsSchema = new Schema(
   {
     name: { type: String, required: true },
     title: { type: String, required: true },
-    img: { type: String, required: true },
+    img: { type: String, required: false },
     price: Number,
     description: { type: String, required: true },
     recommend: String,
-    boughtAt: String,
+    boughtAt: { type: String, required: true },
   },
   {
     timestamp: true,

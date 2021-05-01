@@ -23,9 +23,13 @@ product.get("/new", (req, res) => {
 
 product.post("/", (req, res) => {
   if (req.body.recommend === "on") {
-    req.body.recommend = "Yes";
+    req.body.recommend = "✓";
   } else {
-    req.body.recommend = "No";
+    req.body.recommend = "✕";
+  }
+  if (req.body.img === "") {
+    req.body.img =
+      "https://scontent-dfw5-2.xx.fbcdn.net/v/t1.6435-9/180681393_3756872271033271_7305764011755706092_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=730e14&_nc_ohc=2ikBQH88CSMAX8xQHuB&_nc_ht=scontent-dfw5-2.xx&oh=cdf35c5c82e148fb9e80bdcb72ddd915&oe=60B4D071";
   }
   Review.create(req.body, (err, createdReview) => {
     if (createdReview === undefined) {
@@ -98,9 +102,9 @@ product.delete("/:id", (req, res) => {
 // ===============================
 product.put("/:id", (req, res) => {
   if (req.body.recommend === "on") {
-    req.body.recommend = "Yes";
+    req.body.recommend = "✓";
   } else {
-    req.body.recommend = "No";
+    req.body.recommend = "✕";
   }
   Review.findByIdAndUpdate(req.params.id, req.body, (err, update) => {
     res.redirect("/main/" + req.params.id);

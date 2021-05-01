@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Products</title>
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
     </style>
     <link rel="stylesheet" href="/css/index.css">
 
@@ -13,7 +13,6 @@
         charset="utf-8"
       ></script> -->
 
-    <script src="app.js" charset="utf-8"></script>
 
   </head>
 
@@ -29,7 +28,7 @@
           <input type="submit" name="" value="Log Out" class= ''>
         </form>
         <h2 class= 'username-nav'><%= currentUser.username %></h2>
-        <a href="/main/profile"><img class='profile-img' src="<%= currentUser.img %>" alt=""></a>
+        <a href="/main/profile"><img class='profile-img' src="<%= currentUser.img %>" alt="" onerror="this.src='https://unc.nc/wp-content/uploads/2020/07/Portrait_Placeholder.png'"></a>
       </div>
     </div>
   </header>
@@ -38,10 +37,13 @@
 
     <div class="page">
 
+      <a class = post href="/main/new">POST</a>
+
       <div class="side-container">
         <a class = 'side-links' href="/main/profile">MY PROFILE</a>
         <a class = 'side-links' href="/main/new">POST</a>
       </div>
+
 
 
 
@@ -53,7 +55,7 @@
           <h1><a class='name' href="/main/<%=review[i]._id%>"><%= review[i].name %></a></h1>
           <h2 class='title'><%= review[i].title %></h2>
           <div class="img-div">
-            <img class='product-img' src="<%= review[i].img %>" alt="">
+            <img class='product-img' src="<%= review[i].img %>" alt="products">
           </div>
           </div>
         <% } %>
@@ -63,5 +65,6 @@
     </div>
 
   </body>
+
 
 </html>

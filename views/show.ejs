@@ -5,8 +5,8 @@
     <title></title>
     <link rel="stylesheet" href="/css/show.css">
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
-    </style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+  </style>
   </head>
   <header>
     <div class="nav">
@@ -19,13 +19,19 @@
           <input type="submit" name="" value="Log Out" class= ''>
         </form>
         <h2 class= 'username-nav'><%= user.username %></h2>
-        <a href="/main/profile"><img class='profile-img' src="<%= user.img %>" alt=""></a>
+        <a href="/main/profile"><img class='profile-img' src="<%= user.img %>" alt="" onerror="this.src='https://unc.nc/wp-content/uploads/2020/07/Portrait_Placeholder.png'"></a>
       </div>
     </div>
   </header>
   <body>
 
+
+
     <div class="page">
+
+
+        <a class='back' href="/main">⏎</a>
+
 
       <div class="main-container">
         <!-- <div class="img-container"> -->
@@ -35,21 +41,50 @@
 
         <div class="container">
           <h1 class = 'name'><%=item.name%></h1>
-          <h1 class ='title'><%=item.title%></h1>
-          <p class='description'><%=item.description%></p>
-          <h1 class='price'><%=item.price%></h1>
-          <h1 class='recommend'><%=item.recommend%></h1>
-          <h1 class='bought'><%=item.boughtAt%></h1>
+
+          <div class="item-container">
+            <h1 class ='title'><%=item.title%></h1>
+            <p class='description'><%=item.description%></p>
+
+            <div class="small-container">
+
+              <div class="price-div">
+                <h1 class='price'>Price:</h1>
+                <h1 class='money'> $<%=item.price%></h1>
+              </div>
+
+              <div class="recom-div">
+                <h1 class='recommend'>Recommend to a friend?</h1>
+                <h1 class = 'mark'><%=item.recommend%></h1>
+              </div>
+
+              <div class="bought-div">
+                <h1 class='bought'>Bought at:</h1>
+                <h1 class='store'> <%=item.boughtAt%></h1>
+              </div>
+
+            </div>
+
+
+          </div>
+
+          <div class="buttons-container">
+            <a class='edit' href="/main/<%=item._id%>/edit">EDIT</a>
+
+            <form action="/main/<%=item._id%>?_method=DELETE" method="post">
+              <input class='delete' type="submit" value="REMOVE">
+            </form>
+          </div>
+
         </div>
+
+
+
       </div>
 
 
 
-      <a href="/main/<%=item._id%>/edit">EDIT</a>
 
-      <form action="/main/<%=item._id%>?_method=DELETE" method="post">
-        <input class='delete-btn' type="submit" value="REMOVE">
-      </form>
 
     </div>
 

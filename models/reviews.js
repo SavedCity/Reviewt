@@ -8,6 +8,7 @@ module.exports = [
     description:
       "Fits well and looks awesome! The only problem that I have with it is that, being silicone, it takes me about 3 minutes to get it out of my pocket.",
     recommend: "No",
+    boughtAt: "Amazon",
   },
   {
     name: "Airpods case (majin buu)",
@@ -18,5 +19,6 @@ module.exports = [
     description:
       "High quality, awesome fit, looks like the character. Love it!",
     recommend: "Yes",
+    boughtAt: "Amazon",
   },
 ];
