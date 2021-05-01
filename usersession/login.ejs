@@ -4,27 +4,37 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="/css/signin.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+    </style>
   </head>
   <body>
 
     <div class="main-container">
-      <h1 class='title'>SIGN IN</h1>
-      <form action="/sessions" method="POST">
 
-          <div class="container">
-            <label for="name"></label>
-            <input placeholder="USERNAME" class='items' type="text" name="username" required/>
-            <label for="pass"></label>
-            <input class='items' type="password" name="password" placeholder="PASSWORD" required/>
-            
-            <input class='submit' type="submit" value="LOG IN">
-          </div>
+      <div class="mid-container">
+        <h1 class='title'>ReviewT</h1>
+        <form action="/sessions" method="POST">
 
-      </form>
+            <div class="container">
+              <label for="username"></label>
+              <input placeholder="USERNAME" class='fields' type="text" name="username" required/>
+              <label for="password"></label>
+              <input class='fields' type="password" name="password" placeholder="PASSWORD" required/>
 
-      <h3>Not a ReviewT member? Sign up now!</h3>
-      <a href="/users/signup">SIGN UP</a>
+              <input class='submit' type="submit" value="LOG IN">
+            </div>
+
+        </form>
+
+        <h3 class="signup">Not a ReviewT member?</h3>
+
+        <a class="link" href="/users/signup">SIGN UP</a>
+      </div>
+
     </div>
+
+
 
 
 

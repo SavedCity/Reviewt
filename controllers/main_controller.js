@@ -29,7 +29,7 @@ product.post("/", (req, res) => {
   }
   Review.create(req.body, (err, createdReview) => {
     if (createdReview === undefined) {
-      res.redirect("/new");
+      res.redirect("/main/new");
     } else {
       console.log(createdReview);
       res.redirect("/main");
@@ -105,6 +105,7 @@ product.put("/:id", (req, res) => {
     res.redirect("/main/" + req.params.id);
   });
 });
+
 // Review.create(Reviews, (err, created) => {
 //   if (err) {
 //     console.log(err);

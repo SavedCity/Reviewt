@@ -3,33 +3,50 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="/css/signup.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+    </style>
   </head>
   <body>
-    <h1 class = 'title' >Sign Up</h1>
-      <form action="/users" method="POST">
 
-        <fieldset class=info>
-          <legend>PROFILE INFO</legend>
-          <label for="img"></label>
-          <input class='items' type="text" name="img" placeholder="PROFILE PIC"
-         />
+    <div class="main-container">
 
-          <label for="name"></label>
-          <input class='items' type="text" name="name" placeholder="NAME" required/>
+      <div class="mid-container">
+        <h1 class = 'title' >- SIGN UP -</h1>
+          <form action="/users" method="POST">
 
-          <label for="name"></label>
-          <input placeholder="USERNAME" class='items' type="text" name="username" required/>
+          <div class="container">
+            <fieldset class=info>
+              <legend>ReviewT</legend>
+              <label for="img"></label>
+              <input class='items' type="text" name="img" placeholder="PROFILE PIC"
+             />
 
-          <label for="password"></label>
-          <input class='items' type="password" name="password" placeholder="PASSWORD" required/>
-        </fieldset>
+              <label for="name"></label>
+              <input class='items' type="text" name="name" placeholder="NAME *" required/>
 
-        <input class='submit' type="submit" value="SIGN UP">
+              <label for="name"></label>
+              <input placeholder="USERNAME *" class='items' type="text" name="username" required/>
 
-      <form>
+              <label for="password"></label>
+              <input class='items' type="password" name="password" placeholder="PASSWORD *" required/>
+            </fieldset>
 
-      <h3>Already a ReviewT member? Sign in!</h3>
-      <a href="/sessions/signin">SIGN IN</a>
+            <input class='submit' type="submit" value="SIGN UP">
+
+          <form>
+
+          <h3 class='signin'>Already a ReviewT member?</h3>
+          <a class='link' href="/sessions/signin">SIGN IN</a>
+          </div>
+
+      </div>
+
+
+
+    </div>
+
 
   </body>
 </html>

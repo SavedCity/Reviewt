@@ -15,41 +15,49 @@
   </head>
 
   <header>
-    <div class="head">
-      <h1>ReviewT</h1>
-      <h2>Logged in as <%= currentUser.username %></h2>
-      <a href="/main/profile"><img class='profile-img' src="<%= currentUser.img %>" alt=""></a>
-    </div>
-    <nav>
-      <form action="/sessions?_method=DELETE" method="post">
-        <input type="submit" name="" value="Log Out" class= ''>
-      </form>
-    </nav>
 
-    <a href="/main/new">POST</a>
+    <div class="head">
+      <div class="title-div">
+        <h1 class= 'logo'><a class='logo' href="/main">ReviewT</a></h1>
+      </div>
+
+      <div class="profile-div">
+        <form action="/sessions?_method=DELETE" method="post">
+          <input type="submit" name="" value="Log Out" class= ''>
+        </form>
+        <h2 class= 'username-nav'><%= currentUser.username %></h2>
+        <a href="/main/profile"><img class='profile-img' src="<%= currentUser.img %>" alt=""></a>
+      </div>
+    </div>
   </header>
 
-  <body>
+    <body>
 
-    <div class="product-container">
+    <div class="page">
 
-      <% for (let i = 0; i < review.length; i++ ) {%>
+      <div class="side-container">
+        <a class = 'side-links' href="/main/profile">MY PROFILE</a>
+        <a class = 'side-links' href="/main/new">POST</a>
+      </div>
 
-        <div class="items-container">
-        <h1><a href="/main/<%=review[i]._id%>"><%= review[i].name %></a></h1>
-        <h2><%= review[i].title %></h2>
-        <img class='product-img' src="<%= review[i].img %>" alt="">
-        <h4>$<%= review[i].price %></h4>
-        <p><%= review[i].description %></p>
-        <h5>Recommend? <%= review[i].recommend %></h5>
-        <h5>Bought at: <%= review[i].boughtAt %></h5>
-        </div>
-      <% } %>
+
+
+      <div class="product-container">
+
+        <% for (let i = 0; i < review.length; i++ ) {%>
+
+          <div class="items-container">
+          <h1><a class='name' href="/main/<%=review[i]._id%>"><%= review[i].name %></a></h1>
+          <h2 class='title'><%= review[i].title %></h2>
+          <div class="img-div">
+            <img class='product-img' src="<%= review[i].img %>" alt="">
+          </div>
+          </div>
+        <% } %>
+
+      </div>
 
     </div>
-
-
-
 
   </body>
 

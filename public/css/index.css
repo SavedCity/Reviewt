@@ -1,15 +1,77 @@
+.logo {
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+}
+.title-div {
+  display: flex;
+  width: 50%;
+  margin-left: 20px;
+}
+.profile-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  /* background: red; */
+  width: 50%;
+  margin-right: 20px;
+}
+
+.username-nav {
+  font-size: 30px;
+  margin-right: 15px;
+  color: #fff9;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #289868;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.page {
+  margin-top: 100px;
+  display: flex;
+}
+
+.side-container {
+  /* background: #3335; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 12%;
+  border: 3px solid #0005;
+  margin-right: 10px;
+}
+
+.side-links {
+  text-decoration: none;
+  margin: 10px 10px;
+  font-size: 22px;
+  color: black;
+}
+
 .product-container {
   display: flex;
   justify-content: center;
-  width: 90%;
+  width: 88%;
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
+  /* background: #0007; */
+  border: 3px solid #0005;
+  padding: 20px 0;
 }
 
 .profile-img {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   box-shadow: 0 0 3px black;
 }
@@ -19,9 +81,18 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 50%;
+  width: 30%;
+  /* border: 1px solid black; */
+  margin: 10px;
 }
 
+.img-div {
+  height: 130px;
+  /* background: #3335; */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
 .product-img {
-  width: 20%;
+  width: 25%;
 }
