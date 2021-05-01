@@ -3,20 +3,56 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="/css/show.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+    </style>
   </head>
-  <body>
-    <h1><%=item.name%></h1>
-    <h1><%=item.title%></h1>
-    <img src="<%=item.img%>" alt="">
-    <p><%=item.description%></p>
-    <h1><%=item.price%></h1>
-    <h1><%=item.recommend%></h1>
-    <h1><%=item.boughtAt%></h1>
-<br>
-    <a href="/main/<%=item._id%>/edit">EDIT</a>
+  <header>
+    <div class="nav">
+      <div class="title-div">
+        <h1 class= 'logo'><a class='logo' href="/main">ReviewT</a></h1>
+      </div>
 
-    <form action="/main/<%=item._id%>?_method=DELETE" method="post">
-      <input class='delete-btn' type="submit" value="REMOVE">
-    </form>
+      <div class="profile-div">
+        <form action="/sessions?_method=DELETE" method="post">
+          <input type="submit" name="" value="Log Out" class= ''>
+        </form>
+        <h2 class= 'username-nav'><%= user.username %></h2>
+        <a href="/main/profile"><img class='profile-img' src="<%= user.img %>" alt=""></a>
+      </div>
+    </div>
+  </header>
+  <body>
+
+    <div class="page">
+
+      <div class="main-container">
+        <!-- <div class="img-container"> -->
+          <img class='item-img' src="<%=item.img%>" alt="">
+        <!-- </div> -->
+
+
+        <div class="container">
+          <h1 class = 'name'><%=item.name%></h1>
+          <h1 class ='title'><%=item.title%></h1>
+          <p class='description'><%=item.description%></p>
+          <h1 class='price'><%=item.price%></h1>
+          <h1 class='recommend'><%=item.recommend%></h1>
+          <h1 class='bought'><%=item.boughtAt%></h1>
+        </div>
+      </div>
+
+
+
+      <a href="/main/<%=item._id%>/edit">EDIT</a>
+
+      <form action="/main/<%=item._id%>?_method=DELETE" method="post">
+        <input class='delete-btn' type="submit" value="REMOVE">
+      </form>
+
+    </div>
+
+
   </body>
 </html>

@@ -34,7 +34,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #289868;
+  background: #dfcc23;
   position: fixed;
   width: 100%;
   top: 0;
@@ -44,62 +44,41 @@
 
 .page {
   margin-top: 100px;
-  display: flex;
 }
-
-.side-container {
-  /* background: #3335; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 12%;
-  border: 3px solid #0005;
-  margin-right: 10px;
-}
-
-.side-links {
-  text-decoration: none;
-  margin: 10px 10px;
-  font-size: 22px;
-  color: black;
-}
-
-.product-container {
-  display: flex;
-  justify-content: center;
-  width: 88%;
-  align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
-  /* background: #0007; */
-  border: 3px solid #0005;
-  padding: 20px 0;
-}
-
 .profile-img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   box-shadow: 0 0 3px black;
 }
-
-.items-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  width: 30%;
-  /* border: 1px solid black; */
-  margin: 10px;
-  padding: 20px 0;
-}
-
-.img-div {
+.main-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   align-content: center;
 }
-.product-img {
-  width: 25%;
-  border-radius: 5px;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.name {
+  text-align: center;
+  font-size: 50px;
+  font-family: bebas neue;
+  color: #235d88;
+  margin-bottom: 0px;
+}
+.title {
+  text-align: center;
+  font-family: Yanone Kaffeesatz;
+  color: #000;
+  text-decoration: underline;
+  font-size: 40px;
+}
+.item-img {
+  width: 18%;
 }

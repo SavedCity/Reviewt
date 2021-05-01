@@ -64,6 +64,7 @@ product.get("/:id", (req, res) => {
   Review.findById(req.params.id, (err, foundReview) => {
     res.render("show.ejs", {
       item: foundReview,
+      user: req.session.currentUser,
     });
   });
 });

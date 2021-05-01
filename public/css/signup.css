@@ -53,9 +53,9 @@ legend {
   justify-content: center;
   align-items: center;
   align-content: center;
-  padding: 10px;
+  padding: 0px;
   padding-bottom: 20px;
-  width: 100%;
+  width: 120%;
 }
 
 .items {
@@ -99,17 +99,17 @@ legend {
 }
 .signin {
   color: #333333;
-  font-size: 40px;
+  font-size: 35px;
   font-family: Yanone Kaffeesatz;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
 }
 
 .link {
   text-decoration: none;
-  font-size: 40px;
+  font-size: 32px;
   color: #0009;
-  padding: 5px 7px;
-  padding-top: 9px;
+  padding: 2px 7px;
+  padding-top: 5px;
   border-radius: 5px;
   transition: 0.2s ease-in-out;
   font-family: bebas neue;
