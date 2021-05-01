@@ -264,6 +264,8 @@
   left: 20px;
   top: 90px;
   transition: 0.2s ease-in-out;
+  box-shadow: 0 0 10px 2px #0003;
+  color: black;
 }
 .back:hover {
   transform: rotate(360deg);
