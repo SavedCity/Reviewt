@@ -17,11 +17,14 @@
         <form action="/sessions" method="POST">
 
             <div class="container">
-              
+
               <label for="username"></label>
-              <input placeholder="USERNAME" class='fields' type="text" name="username" required/>
+              <input placeholder="USERNAME" class='fields' type="text" name="username" required oninvalid="this.setCustomValidity('Please enter your username!')"
+              oninput="this.setCustomValidity('')"/>
+
               <label for="password"></label>
-              <input class='fields' type="password" name="password" placeholder="PASSWORD" required/>
+              <input class='fields' type="password" name="password" placeholder="PASSWORD" required oninvalid="this.setCustomValidity('Please enter your password!')"
+              oninput="this.setCustomValidity('')"/>
 
               <input class='submit' type="submit" value="LOG IN">
             </div>

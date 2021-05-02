@@ -1,0 +1,142 @@
+body {
+  background: #4169e299;
+}
+.logo {
+  font-size: 50px;
+  text-decoration: none;
+  color: white;
+  font-family: caveat;
+  text-shadow: 0px 0px 5px yellow;
+}
+.title-div {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50px;
+  margin: 0 0 0 20px;
+}
+.profile-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  width: 50%;
+  margin-right: 20px;
+  padding: 0;
+  /* height: 60px; */
+}
+
+.username-nav {
+  font-size: 30px;
+  margin-right: 15px;
+  color: #fff9;
+  margin: 0 15px 0 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #383838;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 70px;
+  box-shadow: 0 0 15px 0px #0008;
+}
+
+.page {
+  margin-top: 100px;
+}
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 3px black;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.title {
+  font-family: bebas neue;
+  font-size: 40px;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+}
+.left-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.right-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.items {
+  border: none;
+  background: #fff2;
+  margin-bottom: 17px;
+  height: 54px;
+  width: 360px;
+  color: white;
+  border-radius: 4px;
+  font-size: 23px;
+  outline: none;
+  /* box-shadow: 0 0 10px white; */
+  transition: 0.3s ease-in-out;
+}
+.items:hover {
+  background: #fff4;
+  width: 380px;
+}
+
+.check {
+  font-family: tajawal;
+  font-size: 30px;
+  margin: 20px 0 20px 0;
+}
+.checkbox {
+  width: 30px;
+  height: 30px;
+}
+
+.check-div {
+  display: flex;
+  margin-bottom: 0px;
+}
+
+.submit {
+  height: 44px;
+  border-radius: 4px;
+  font-size: 22px;
+  background: #bdb200;
+  border: none;
+  margin-top: 10px;
+  width: 220px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.submit:hover {
+  width: 240px;
+  background: #ffe200;
+  font-size: 25px;
+}

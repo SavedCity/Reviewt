@@ -24,13 +24,16 @@
              />
 
               <label for="name"></label>
-              <input class='items' type="text" name="name" placeholder="NAME *" required/>
+              <input class='items' type="text" name="name" placeholder="NAME *" required oninvalid="this.setCustomValidity('Enter your name')"
+              oninput="this.setCustomValidity('')"/>
 
               <label for="name"></label>
-              <input placeholder="USERNAME *" class='items' type="text" name="username" required/>
+              <input placeholder="USERNAME *" class='items' type="text" name="username" required oninvalid="this.setCustomValidity('User name must be 2-15 characters long with no symbols')"
+              oninput="this.setCustomValidity('')" pattern="[A-Za-z\s]{2,16}"/>
 
               <label for="password"></label>
-              <input class='items' type="password" name="password" placeholder="PASSWORD *" required/>
+              <input class='items' type="password" name="password" placeholder="PASSWORD *" required oninvalid="this.setCustomValidity('Password must be 5-16 characters long with at least 1 letter')"
+              oninput="this.setCustomValidity('')" pattern="[A-Za-z0-9\W+]{5,16}"/>
             </fieldset>
 
             <input class='submit' type="submit" value="SIGN UP">

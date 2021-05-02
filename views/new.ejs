@@ -2,23 +2,93 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Post A Review | ReviewT</title>
+    <link rel="stylesheet" href="/css/new.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+    </style>
+
+    <header>
+
+      <div class="nav">
+        <div class="title-div">
+          <h1 class= 'logo'><a class='logo' href="/main">ReviewT</a></h1>
+        </div>
+
+        <div class="profile-div">
+          <form action="/sessions?_method=DELETE" method="post">
+            <input type="submit" name="" value="Log Out" class= ''>
+          </form>
+          <h2 class= 'username-nav'><%= currentUser.username %></h2>
+          <a href="/main/profile"><img class='profile-img' src="<%= currentUser.img %>" alt="" onerror="this.src='https://unc.nc/wp-content/uploads/2020/07/Portrait_Placeholder.png'"></a>
+        </div>
+      </div>
+    </header>
+
   </head>
+
+
+
   <body>
-    <h1>POST A PRODUCT YOU WANT TO REVIEW!</h1>
 
-    <form class="" action="/main" method="post">
 
-      <input class = 'items' type="text" name="name" placeholder='NAME*'>
-      <input class = 'items' type="text" name="title" placeholder='TITLE*'>
-      <input class = 'items' type="text" name="price" placeholder='PRICE'>
-      <input class = 'items' type="text" name="description" placeholder='DESCRIPTION OF THE PRODUCT*'>
+    <div class="page">
 
-      <input class = 'items' type="text" name="boughtAt" placeholder="PLACE OF PURCHASE*">
-      <input type="text" name="img" placeholder="IMG URL" >
-      <h3>Recommend to a friend? <input class = 'items' type="checkbox" name="recommend" ></h3>
-      <input type="submit" name="" value="POST">
-    </form>
+      <div class="main-container">
+
+        <div class="">
+          <h1 class = 'title'>Review A Product</h1>
+        </div>
+
+
+
+
+
+      <form action="/main" method="post">
+
+        <div class="container">
+
+        <div class="left-div">
+
+          <input class = 'items' type="text" name="name" placeholder='PRODUCT NAME' required oninvalid="this.setCustomValidity('Product name must be 2-20 characters long')"
+          oninput="this.setCustomValidity('')" pattern="[A-Za-z\s\W+]{2,20}">
+
+          <input class = 'items' type="text" name="title" placeholder='TITLE' required oninvalid="this.setCustomValidity('Title must be 5-30 characters long')"
+          oninput="this.setCustomValidity('')" pattern="[A-Za-z\s\W+]{5,30}">
+
+          <input class = 'items' type="text" name="description" placeholder='PRODUCT DESCRIPTION' required oninvalid="this.setCustomValidity('Description must be 8-300 characters long')"
+          oninput="this.setCustomValidity('')" pattern="[A-Za-z\s\W+]{8,300}">
+
+          <input class = 'items' type="text" name="boughtAt" placeholder="PLACE OF PURCHASE" required oninvalid="this.setCustomValidity('Place of purchase must be 2-20 characters long')"
+          oninput="this.setCustomValidity('')" pattern="[A-Za-z\s\W+]{2,20}">
+
+          <div class="check-div">
+            <h3 class='check'>I'D RECOMMEND THIS? </h3><input class = 'checkbox' type="checkbox" name="recommend" >
+          </div>
+
+          <input class='submit' type="submit" name="" value="POST">
+
+          </div>
+
+          <div class="right-div">
+
+          <input class = 'items' type="text" name="price" placeholder='PRICE'>
+
+          <input class='items' type="text" name="img" placeholder="IMG URL" >
+
+
+          </div>
+
+          </div>
+
+
+
+
+      </form>
+
+      </div>
+
+    </div>
 
   </body>
 </html>

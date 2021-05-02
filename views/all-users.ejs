@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ReviewT Users | ReviewT</title>
+  </head>
+  <body>
+    <% for (let i = 0; i < user.length; i++) { %>
+      <a href="#"><%=user[i].username%></a>
+      <img src="<%=user[i].img%>" alt="" onerror="this.src='https://unc.nc/wp-content/uploads/2020/07/Portrait_Placeholder.png'">
+    <% } %>
+  </body>
+</html>

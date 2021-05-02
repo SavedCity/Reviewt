@@ -18,7 +18,9 @@ const authenticated = (req, res, next) => {
 // ======== NEW ==================
 // ===============================
 product.get("/new", (req, res) => {
-  res.render("new.ejs");
+  res.render("new.ejs", {
+    currentUser: req.session.currentUser,
+  });
 });
 
 product.post("/", (req, res) => {
@@ -50,6 +52,16 @@ product.get("/profile", (req, res) => {
   });
 });
 
+// ===============================
+// ======== ALL USERS ============
+// ===============================
+product.get("/users", (req, res) => {
+  User.find({}, (err, findAll) => {
+    res.render("all-users.ejs", {
+      user: findAll,
+    });
+  });
+});
 // ===============================
 // ======== EDIT =================
 // ===============================

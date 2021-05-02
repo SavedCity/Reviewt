@@ -2,6 +2,28 @@ body {
   background: #a8ffb6;
 }
 
+.back {
+  font-size: 50px;
+  color: white;
+  text-decoration: none;
+  background: #1da5cd;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  text-align: center;
+  padding: 4px 4px 0 0;
+  position: fixed;
+  left: 20px;
+  top: 90px;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 0 10px 2px #0003;
+  color: black;
+  font-weight: 900;
+}
+.back:hover {
+  transform: rotate(360deg);
+}
+
 .page {
   margin-top: 50px;
   display: flex;
@@ -13,7 +35,7 @@ body {
   text-decoration: none;
   color: white;
   font-family: caveat;
-  text-shadow: 3px 2px 8px #0009;
+  text-shadow: 0px 0px 5px yellow;
 }
 .title-div {
   display: flex;
@@ -45,7 +67,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #d1af36;
+  background: #383838;
   position: fixed;
   width: 100%;
   top: 0;
@@ -84,55 +106,55 @@ body {
   flex-direction: column;
   align-items: center;
   align-content: center;
+  margin-left: 30px;
 }
 
 .img {
   width: 200px;
   /* height: 200px; */
   border-radius: 10px;
-  box-shadow: 0 0 10px 2px #fff9;
-  margin-right: 20px;
+  box-shadow: 0 0 10px 2px #0004;
+  margin-right: 30px;
 }
 
 .title {
   font-family: caveat;
   font-size: 70px;
   text-shadow: 2px 2px 9px #0005;
+  margin-bottom: 20px;
+}
+
+.username-title {
   margin-bottom: 0;
+  color: #0008;
+  font-family: tajawal;
+  font-weight: 600;
+  font-size: 25px;
 }
 
 .username {
   font-size: 50px;
   color: #000;
   font-family: tajawal;
-  margin: 0;
+  margin: 3px;
+  text-shadow: 2px 2px 4px #0004;
+  margin-bottom: 0;
 }
+
+.name-title {
+  margin-bottom: 3px;
+  color: #0008;
+  font-family: tajawal;
+  font-weight: 600;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
 .name {
   color: #000;
   font-size: 30px;
   margin: 0;
   font-family: bebas neue;
   font-weight: 100;
-}
-
-.back {
-  font-size: 50px;
-  color: white;
-  text-decoration: none;
-  background: #1da5cd;
-  width: 80px;
-  height: 80px;
-  border-radius: 50px;
-  text-align: center;
-  padding: 4px 4px 0 0;
-  position: fixed;
-  left: 20px;
-  top: 90px;
-  transition: 0.2s ease-in-out;
-  box-shadow: 0 0 10px 2px #0003;
-  color: black;
-  font-weight: 900;
-}
-.back:hover {
-  transform: rotate(360deg);
+  text-shadow: 2px 2px 4px #0004;
 }
