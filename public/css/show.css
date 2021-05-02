@@ -259,13 +259,14 @@
   height: 80px;
   border-radius: 50px;
   text-align: center;
-  padding: 6px 6px 0 0;
+  padding: 4px 4px 0 0;
   position: fixed;
   left: 20px;
   top: 90px;
   transition: 0.2s ease-in-out;
   box-shadow: 0 0 10px 2px #0003;
   color: black;
+  font-weight: 900;
 }
 .back:hover {
   transform: rotate(360deg);

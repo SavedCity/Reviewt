@@ -64,8 +64,12 @@ app.use("/main", productController);
 
 const userController = require("./controllers/users_controller.js");
 app.use("/users", userController);
+
 const sessionController = require("./controllers/sessions_controller.js");
 app.use("/sessions", sessionController);
+
+const authorsController = require("./controllers/authors_controller.js");
+app.use("/authors", authorsController);
 
 //___________________
 // Routes
