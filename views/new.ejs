@@ -3,7 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Post A Review | ReviewT</title>
+
     <link rel="stylesheet" href="/css/new.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="app.js" charset="utf-8"></script>
+
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
     </style>
@@ -55,8 +60,8 @@
           <input class = 'items' type="text" name="name" placeholder='PRODUCT NAME' required oninvalid="this.setCustomValidity('Product name must be 2-20 characters long')"
           oninput="this.setCustomValidity('')" pattern="[A-Za-z0-9\s\W+]{2,20}">
 
-          <input class = 'items' type="text" name="title" placeholder='TITLE' required oninvalid="this.setCustomValidity('Title must be 5-30 characters long')"
-          oninput="this.setCustomValidity('')" pattern="[A-Za-z0-9\s\W+]{5,30}">
+          <input class = 'items' type="text" name="title" placeholder='TITLE' required oninvalid="this.setCustomValidity('Title must be 5-35 characters long')"
+          oninput="this.setCustomValidity('')" pattern="[A-Za-z0-9\s\W+]{5,35}">
 
           <textarea class = 'description' type=" " name="description" placeholder='PRODUCT DESCRIPTION' required oninvalid="this.setCustomValidity('Description must be 8-300 characters long')"
           oninput="this.setCustomValidity('')" pattern="[A-Za-z0-9\s\W+]{8,300}"></textarea>
@@ -76,7 +81,8 @@
 
             <h2 class='optional'>Optional</h2>
 
-          <input class = 'items' type="text" name="price" placeholder='PRICE'>
+          <input value="" class = 'items' type="text" name="price" placeholder='PRICE (include "$")' oninvalid="this.setCustomValidity('Must only be numbers')"
+          oninput="this.setCustomValidity('')" pattern="[0-9\W]{0,20}">
 
           <input class='items' type="text" name="img" placeholder="IMG URL" >
 

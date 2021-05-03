@@ -30,7 +30,7 @@
 
   <div class="page">
 
-    <a class='back' href="/main">⬅</a>
+    <a class='back' href="/main/">⬅</a>
 
     <div class="container">
 
@@ -43,10 +43,10 @@
     <% for (let i = 0; i < user.length; i++) { %>
 
         <div class="small-div">
-          <a class='username' href="<%user[i].id%>"><%=user[i].username%></a>
+          <a class='username' href="/main/show/<%=user[i].id%>"><%=user[i].username%></a>
 
           <div class="img-div">
-            <a class='img-link' href="<%user[i].username%>"><img class='users-img' src="<%=user[i].img%>" alt="User Image" onerror="this.src='https://unc.nc/wp-content/uploads/2020/07/Portrait_Placeholder.png'"></a>
+            <a class='img-link' href="/main/show/<%=user[i].id%>"><img class='users-img' src="<%=user[i].img%>" alt="User Image" onerror="this.src='https://unc.nc/wp-content/uploads/2020/07/Portrait_Placeholder.png'"></a>
           </div>
 
         </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>My Profile | ReviewT</title>
-    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/users-show.css">
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Fredoka+One&family=Tajawal:wght@200;300;400;500;700;800;900&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
     </style>
@@ -28,8 +28,8 @@
         <form action="/sessions?_method=DELETE" method="post">
           <input type="submit" name="" value="Log Out" class= ''>
         </form>
-        <h2 class= 'username-nav'><%= profile.username %></h2>
-        <a href="/main/profile"><img class='profile-img' src="<%= profile.img %>" alt="" onerror="this.src='https://unc.nc/wp-content/uploads/2020/07/Portrait_Placeholder.png'"></a>
+        <h2 class= 'username-nav'><%= user.username %></h2>
+        <a href="/main/profile"><img class='profile-img' src="<%= user.img %>" alt="" onerror="this.src='https://unc.nc/wp-content/uploads/2020/07/Portrait_Placeholder.png'"></a>
       </div>
     </div>
   </header>
@@ -38,6 +38,7 @@
 
     <div class="page">
 
+      <a class='back' href="/main/users">⬅</a>
 
       <div class="container">
         <h2 class='title'>ReviewT Profile</h2>

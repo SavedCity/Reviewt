@@ -19,8 +19,8 @@ body {
   text-decoration: none;
 }
 .home-word {
-  margin: 10px 0 0 5px;
-  font-size: 33px;
+  margin: 15px 0 0 5px;
+  font-size: 28px;
   font-family: fredoka one;
   color: #fff7;
 }
@@ -29,15 +29,11 @@ body {
 }
 
 .house {
-  width: 50px;
+  width: 43px;
   opacity: 0.5;
   /* transition: 0.3s ease-in-out; */
-  margin: 5px 0 0px 50px;
+  margin: 10px 0 0px 50px;
 }
-
-/* .house:hover {
-  width: 60px;
-} */
 
 .title-div {
   display: flex;
@@ -137,7 +133,7 @@ body {
   outline: none;
   /* box-shadow: 0 0 10px white; */
   transition: 0.3s ease-in-out;
-  font-family: Bebas Neue;
+  font-family: tajawal;
   letter-spacing: 2px;
 }
 .items:hover {
@@ -160,7 +156,7 @@ body {
   /* box-shadow: 0 0 10px white; */
   /* transition: 0.3s ease-in-out; */
   resize: vertical;
-  font-family: Bebas Neue;
+  font-family: tajawal;
   letter-spacing: 1px;
 }
 .description:hover {
@@ -244,7 +240,7 @@ body {
   font-weight: 900;
 }
 .back:hover {
-  transform: rotate(360deg);
+  background: #a5042e;
 }
 
 .img {

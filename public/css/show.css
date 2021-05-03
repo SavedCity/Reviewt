@@ -270,7 +270,7 @@
   font-weight: 900;
 }
 .back:hover {
-  transform: rotate(360deg);
+  background: #a5042e;
 }
 
 /* =================== FOOT ======================= */

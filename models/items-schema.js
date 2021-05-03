@@ -6,7 +6,7 @@ const itemsSchema = new Schema(
     name: { type: String, required: true },
     title: { type: String, required: true },
     img: { type: String, required: false },
-    price: Number,
+    price: String,
     description: { type: String, required: true, minLength: 8, maxLength: 300 },
     recommend: String,
     boughtAt: { type: String, required: true },

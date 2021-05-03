@@ -106,7 +106,7 @@ body {
   outline: none;
   /* box-shadow: 0 0 10px white; */
   transition: 0.3s ease-in-out;
-  font-family: Bebas Neue;
+  font-family: tajawal;
   letter-spacing: 2px;
 }
 .items:hover {
@@ -129,7 +129,7 @@ body {
   /* box-shadow: 0 0 10px white; */
   /* transition: 0.3s ease-in-out; */
   resize: vertical;
-  font-family: Bebas Neue;
+  font-family: tajawal;
   letter-spacing: 1px;
 }
 .description:hover {
@@ -213,7 +213,7 @@ body {
   font-weight: 900;
 }
 .back:hover {
-  transform: rotate(360deg);
+  background: #a5042e;
 }
 /* =================== FOOT ======================= */
 

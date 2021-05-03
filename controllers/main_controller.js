@@ -63,18 +63,28 @@ product.get("/users", (req, res) => {
     });
   });
 });
-
-// // ===============================
-// // ======== USERS SHOW ===========
-// // ===============================
-// product.get("/:id", (req, res) => {
-//   User.findById(req.params.id, (err, found) => {
-//     res.render("users-show.ejs", {
-//       users: found,
-//       user: req.session.currentUser,
-//     });
-//   });
-// });
+// ===============================
+// ======== SHOW =================
+// ===============================
+product.get("/:id", (req, res) => {
+  Review.findById(req.params.id, (err, foundReview) => {
+    res.render("show.ejs", {
+      item: foundReview,
+      user: req.session.currentUser,
+    });
+  });
+});
+// ===============================
+// ======== USERS SHOW ===========
+// ===============================
+product.get("/show/:id", (req, res) => {
+  User.findById(req.params.id, (err, found) => {
+    res.render("users-show.ejs", {
+      profile: found,
+      user: req.session.currentUser,
+    });
+  });
+});
 
 // ===============================
 // ======== EDIT =================
@@ -88,17 +98,6 @@ product.get("/:id/edit", (req, res) => {
   });
 });
 
-// ===============================
-// ======== SHOW =================
-// ===============================
-product.get("/:id", (req, res) => {
-  Review.findById(req.params.id, (err, foundReview) => {
-    res.render("show.ejs", {
-      item: foundReview,
-      user: req.session.currentUser,
-    });
-  });
-});
 // ===============================
 // ======== INDEX ================
 // ===============================
@@ -134,7 +133,12 @@ product.put("/:id", (req, res) => {
     req.body.recommend = "✕";
   }
   Review.findByIdAndUpdate(req.params.id, req.body, (err, update) => {
-    res.redirect("/main/" + req.params.id);
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(update);
+      res.redirect("/main/" + req.params.id);
+    }
   });
 });
 
