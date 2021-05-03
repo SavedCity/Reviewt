@@ -31,7 +31,7 @@ product.post("/", (req, res) => {
   }
   if (req.body.img === "") {
     req.body.img =
-      "https://scontent-dfw5-2.xx.fbcdn.net/v/t1.6435-9/180681393_3756872271033271_7305764011755706092_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=730e14&_nc_ohc=2ikBQH88CSMAX8xQHuB&_nc_ht=scontent-dfw5-2.xx&oh=cdf35c5c82e148fb9e80bdcb72ddd915&oe=60B4D071";
+      "https://scontent-hou1-1.xx.fbcdn.net/v/t1.6435-9/182162048_3761943260526172_6849399484459786889_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=730e14&_nc_ohc=bcwo2p7IO90AX_2bMxC&_nc_ht=scontent-hou1-1.xx&oh=66b18e80287cc602dcf5ccda93b3035e&oe=60B6C7FF";
   }
   Review.create(req.body, (err, createdReview) => {
     if (createdReview === undefined) {

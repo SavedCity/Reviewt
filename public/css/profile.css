@@ -122,7 +122,7 @@ body {
   justify-content: center;
   align-items: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 .info-container {
@@ -183,12 +183,44 @@ body {
   font-weight: 100;
   text-shadow: 1px 1px 4px #0004;
 }
+
+.about-div {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.about-title {
+  margin-bottom: 3px;
+  color: #0008;
+  font-family: tajawal;
+  font-weight: 600;
+  font-size: 25px;
+  margin-top: 10px;
+  text-align: center;
+}
+.about {
+  color: #0009;
+  font-size: 30px;
+  margin: 0;
+  font-family: bebas neue;
+  font-weight: 100;
+  text-shadow: 1px 1px 4px #0002;
+  text-align: center;
+  width: 50%;
+  letter-spacing: 1px;
+  font-size: 35px;
+}
+
 /* =================== FOOT ======================= */
 
 .foot {
   margin: 30px 14px 30px 14px;
   background-color: #383838;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,6 +280,6 @@ body {
   margin-bottom: 3px;
 }
 .line-break {
-  margin-top: 180px;
+  margin-top: 100px;
   margin-bottom: 60px;
 }

@@ -6,6 +6,7 @@ const signinSchema = new Schema({
   password: { type: String, required: true },
   name: { type: String, required: true },
   img: String,
+  about: { type: String, required: true },
 });
 
 const User = mongoose.model("User", signinSchema);

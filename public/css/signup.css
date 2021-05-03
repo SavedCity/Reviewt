@@ -2,14 +2,24 @@ body {
   background: #2b2b2b;
 }
 
+.star {
+  color: #ffe62e;
+  text-shadow: 0 0 5px #000;
+  position: absolute;
+  top: 7.5%;
+  left: 24%;
+  font-size: 30px;
+  transform: rotate(-23deg);
+}
+
 .title {
   font-family: Yanone Kaffeesatz;
   font-size: 40px;
-  margin: 28px 0;
-  color: #af8b01;
+  margin: 35px 0;
+  color: #a1fb00;
   text-align: center;
-  letter-spacing: 1px;
-  text-shadow: 1.5px 1.5px 3px #0008;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 3px #000;
 }
 
 .main-container {
@@ -27,7 +37,7 @@ body {
   flex-direction: column;
   background: #5eefca;
   width: 40%;
-  padding: 20px 90px;
+  padding: 3% 7%;
   border-radius: 15px;
   margin-top: 0px;
   box-shadow: 0 0 25px 10px #0005;
@@ -78,7 +88,27 @@ legend {
   background: #0007;
   width: 240px;
 }
-
+.about {
+  border: none;
+  background: #0005;
+  margin-bottom: 12px;
+  height: 124px;
+  width: 220px;
+  color: white;
+  border-radius: 4px;
+  font-size: 23px;
+  outline: none;
+  max-height: 300px;
+  resize: both;
+  font-family: tajawal;
+  min-height: 44px;
+  max-width: 340px;
+  min-width: 220px;
+}
+.about:hover {
+  background: #0007;
+  /* width: 240px; */
+}
 .submit {
   height: 44px;
   border-radius: 4px;

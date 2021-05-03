@@ -2,6 +2,16 @@ body {
   background: #2ecfaa99;
 }
 
+/* .star {
+  color: #ffe62e;
+  text-shadow: 0 0 5px #000;
+  position: absolute;
+  top: 12%;
+  right: 30.7%;
+  font-size: 25px;
+  transform: rotate(23deg);
+} */
+
 .title {
   color: #fff7f7;
   text-shadow: 0 0 5px yellow;
@@ -9,6 +19,7 @@ body {
   font-family: caveat;
   font-weight: 500;
   margin: 20px 0;
+  text-align: center;
 }
 
 .main-container {
@@ -26,9 +37,9 @@ body {
   flex-direction: column;
   background: #282828;
   width: 25%;
-  padding: 40px 90px;
+  padding: 3% 7%;
   border-radius: 15px;
-  margin-top: 90px;
+  margin-top: 6.5%;
   box-shadow: 0 0 25px 10px #0005;
 }
 .container {

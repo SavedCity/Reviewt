@@ -2,12 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Post A Review | ReviewT</title>
+    <title>Post A Reviewt | Reviewt</title>
 
     <link rel="stylesheet" href="/css/new.css">
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-    <script src="app.js" charset="utf-8"></script>
+    <!-- <script defer src="/css/app.js" charset="utf-8"></script> -->
 
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
@@ -17,7 +18,7 @@
 
       <div class="nav">
         <div class="title-div">
-          <h1 class= 'logo'><a class='logo' href="/main">ReviewT</a></h1>
+          <h1 class= 'logo'><a class='logo' href="/main">Reviewt</a></h1>
         </div>
 
         <div class="profile-div">
@@ -47,10 +48,6 @@
           <h1 class = 'title'>Review A Product</h1>
         </div>
 
-
-
-
-
       <form action="/main" method="post">
 
         <div class="container">
@@ -63,7 +60,7 @@
           <input class = 'items' type="text" name="title" placeholder='TITLE' required oninvalid="this.setCustomValidity('Title must be 5-35 characters long')"
           oninput="this.setCustomValidity('')" pattern="[A-Za-z0-9\s\W+]{5,35}">
 
-          <textarea class = 'description' type=" " name="description" placeholder='PRODUCT DESCRIPTION' required oninvalid="this.setCustomValidity('Description must be 8-300 characters long')"
+          <textarea class = 'description' type=" " name="description" placeholder='PRODUCT DESCRIPTION' required oninvalid="this.setCustomValidity('Description is required')"
           oninput="this.setCustomValidity('')" pattern="[A-Za-z0-9\s\W+]{8,300}"></textarea>
 
           <input class = 'items' type="text" name="boughtAt" placeholder="PLACE OF PURCHASE" required oninvalid="this.setCustomValidity('Place of purchase must be 2-20 characters long')"
@@ -119,12 +116,24 @@
       </div>
 
       <div class="tag">
-        <a class='bottom-logo-link' href="/main"><h3 class='bottom-logo'>ReviewT</h3></a>
+        <a class='bottom-logo-link' href="/main"><h3 class='bottom-logo'>Reviewt</h3></a>
         <h3 class='my-name'><span style="font-weight: 300; color: #fff6">Developed by:</span> Andy Checo</h3>
       </div>
 
     </div>
 
   </footer>
+
+  <script type="text/javascript">
+
+    $(() => {
+
+        const test = $('.foot')
+        test.on('click', () => {
+          test.css('background', 'white')
+        })
+    })
+
+  </script>
 
 </html>

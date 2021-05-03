@@ -2,16 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>ReviewT</title>
+    <title>Reviewt</title>
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
     </style>
     <link rel="stylesheet" href="/css/index.css">
 
-      <!-- <script
+      <script
         src="https://code.jquery.com/jquery-3.5.1.min.js"
         charset="utf-8"
-      ></script> -->
+      ></script>
 
 
   </head>
@@ -20,10 +20,14 @@
 
     <div class="nav">
       <div class="title-div">
-        <h1 class= 'logo'><a class='logo' href="/main">ReviewT</a></h1>
+        <h1 class= 'logo'><a class='logo' href="/main">Reviewt</a></h1>
       </div>
 
       <div class="profile-div">
+
+        <button class='dark-mode' type="button" name="button">TOGGLE DARK</button>
+        <button class='light-mode' type="button" name="button">TOGGLE DARK</button>
+
         <form action="/sessions?_method=DELETE" method="post">
           <input type="submit" name="" value="Log Out" class= ''>
         </form>
@@ -33,7 +37,7 @@
     </div>
   </header>
 
-    <body>
+    <body class='body'>
 
     <div class="page">
 
@@ -89,12 +93,35 @@
       </div>
 
       <div class="tag">
-        <a class='bottom-logo-link' href="/main"><h3 class='bottom-logo'>ReviewT</h3></a>
+        <a class='bottom-logo-link' href="/main"><h3 class='bottom-logo'>Reviewt</h3></a>
         <h3 class='my-name'><span style="font-weight: 300; color: #fff6">Developed by:</span> Andy Checo</h3>
       </div>
 
     </div>
 
   </footer>
+
+  <script type="text/javascript">
+
+
+    $(() => {
+
+
+      $('.dark-mode').on('click', () => {
+        $('.product-container').toggleClass('product-container-after')
+        $('.side-container').toggleClass('side-container-after')
+        $('.side-links').toggleClass('side-links-after')
+        $('.name').toggleClass('name-after')
+        $('.title').toggleClass('title-after')
+        $('.body').toggleClass('body-after')
+        $('.dark-mode').hide()
+        $('.light-mode').toggleClass('light-mode-after')
+      })
+
+
+    })
+
+
+  </script>
 
 </html>

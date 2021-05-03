@@ -5,7 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="/css/signup.css">
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Fredoka+One&family=Tajawal:wght@200;300;400;500;700;800;900&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
     </style>
   </head>
   <body>
@@ -17,15 +17,22 @@
           <form action="/users" method="POST">
 
           <div class="container">
+            <h5 class='star'>★★★★☆</h5>
             <fieldset class=info>
-              <legend>ReviewT</legend>
-              <label for="img"></label>
-              <input class='items' type="text" name="img" placeholder="PROFILE PIC"
-             />
+              <legend>Reviewt</legend>
 
               <label for="name"></label>
               <input class='items' type="text" name="name" placeholder="NAME *" required oninvalid="this.setCustomValidity('Enter your name')"
               oninput="this.setCustomValidity('')"/>
+
+              <textarea placeholder="TELL US SOMETHING (OR A FEW THNGS) ABOUT YOURSELF *" class='about' name="about" required oninvalid="this.setCustomValidity('This field is required')"
+              oninput="this.setCustomValidity('')" pattern="[A-Za-z0-9\s\W+]{8,300}"></textarea>
+
+              <label for="img"></label>
+              <input class='items' type="text" name="img" placeholder="PROFILE PIC"
+             />
+
+
 
               <label for="name"></label>
               <input placeholder="USERNAME *" class='items' type="text" name="username" required oninvalid="this.setCustomValidity('User name must be 2-15 characters long with no symbols')"
@@ -40,16 +47,13 @@
 
           <form>
 
-          <h3 class='signin'>Already a ReviewT member?</h3>
+          <h3 class='signin'>Already a Reviewt member?</h3>
           <a class='link' href="/sessions/signin">SIGN IN</a>
           </div>
 
       </div>
 
-
-
     </div>
-
 
   </body>
 </html>
