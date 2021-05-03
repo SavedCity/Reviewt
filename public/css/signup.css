@@ -4,9 +4,12 @@ body {
 
 .title {
   font-family: Yanone Kaffeesatz;
-  font-size: 60px;
-  margin: 5px 0;
+  font-size: 40px;
+  margin: 28px 0;
   color: #af8b01;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 1.5px 1.5px 3px #0008;
 }
 
 .main-container {
