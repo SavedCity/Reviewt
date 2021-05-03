@@ -14,7 +14,7 @@ body {
   align-items: center;
   width: 50%;
   height: 50px;
-  margin: 0 0 0 20px;
+  margin: 0 0 0 35px;
 }
 .profile-div {
   display: flex;
@@ -67,7 +67,10 @@ body {
 
 .title {
   font-family: bebas neue;
-  font-size: 40px;
+  font-size: 50px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 5px #0007;
 }
 
 .container {
@@ -89,33 +92,70 @@ body {
   align-content: center;
   flex-direction: column;
   margin-left: 20px;
+  margin-bottom: 347px;
 }
 .items {
   border: none;
-  background: #fff2;
+  background: #0008;
   margin-bottom: 17px;
   height: 54px;
   width: 360px;
   color: white;
   border-radius: 4px;
-  font-size: 23px;
+  font-size: 25px;
   outline: none;
   /* box-shadow: 0 0 10px white; */
   transition: 0.3s ease-in-out;
+  font-family: Bebas Neue;
+  letter-spacing: 2px;
 }
 .items:hover {
-  background: #fff4;
-  width: 380px;
+  background: #0009;
+  /* box-shadow: 0 0 8px #0008; */
+}
+
+.description {
+  border: none;
+  background: #0008;
+  margin-bottom: 17px;
+  height: 150px;
+  max-height: 250px;
+  min-height: 54px;
+  width: 360px;
+  color: white;
+  border-radius: 4px;
+  font-size: 25px;
+  outline: none;
+  /* box-shadow: 0 0 10px white; */
+  /* transition: 0.3s ease-in-out; */
+  resize: vertical;
+  font-family: Bebas Neue;
+  letter-spacing: 1px;
+}
+.description:hover {
+  background: #0009;
+}
+
+::placeholder {
+  color: #fff7;
+  padding-left: 10px;
 }
 
 .check {
   font-family: tajawal;
   font-size: 30px;
-  margin: 20px 0 20px 0;
+  margin: 5px 0 20px 6px;
+  color: #0009;
+  /* background: #0007; */
+  padding: 10px 10px 0 10px;
+  border-radius: 4px;
+  font-weight: 400;
 }
 .checkbox {
   width: 30px;
   height: 30px;
+  margin-top: 11.5px;
+  margin-left: 5px;
 }
 
 .check-div {
@@ -127,16 +167,118 @@ body {
   height: 44px;
   border-radius: 4px;
   font-size: 22px;
-  background: #bdb200;
+  background: #370f5e99;
   border: none;
   margin-top: 10px;
-  width: 220px;
+  width: 120px;
   transition: 0.3s ease-in-out;
   cursor: pointer;
   margin-bottom: 20px;
+  color: #fff9;
 }
 .submit:hover {
-  width: 240px;
-  background: #ffe200;
-  font-size: 25px;
+  width: 125px;
+  background: #470f7e99;
+  font-size: 27px;
+  padding-top: 3px;
+}
+
+.optional {
+  font-family: tajawal;
+  background: #0005;
+  color: #fff9;
+  padding: 8px 8px 0 8px;
+  border-radius: 4px;
+  margin-top: 0;
+}
+
+/*  =============== BACK BUTTON ==================== */
+
+.back {
+  font-size: 50px;
+  color: white;
+  text-decoration: none;
+  background: #c5143e;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  text-align: center;
+  padding: 4px 4px 0 0;
+  position: fixed;
+  left: 20px;
+  top: 90px;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 0 10px 2px #0003;
+  color: black;
+  font-weight: 900;
+}
+.back:hover {
+  transform: rotate(360deg);
+}
+/* =================== FOOT ======================= */
+
+.foot {
+  margin: 30px 14px 30px 14px;
+  background-color: #383838;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  /* flex-direction: column; */
+}
+
+.line {
+  background: #fff2;
+  width: 2px;
+  height: 90px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-left: 160px;
+}
+
+.tag {
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bottom-logo {
+  font-family: caveat;
+  font-size: 30px;
+  color: #fff9;
+  margin-bottom: 6px;
+}
+
+.bottom-logo-link {
+  text-decoration: none;
+}
+
+.my-name {
+  font-size: 20px;
+  color: #fff9;
+  font-family: tajawal;
+  font-weight: 200;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.foot-links {
+  text-decoration: none;
+  color: #fff9;
+  font-size: 18px;
+  font-family: tajawal;
+  margin-bottom: 3px;
+}
+.line-break {
+  margin-top: 60px;
 }

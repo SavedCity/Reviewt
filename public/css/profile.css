@@ -6,7 +6,7 @@ body {
   font-size: 50px;
   color: white;
   text-decoration: none;
-  background: #1da5cd;
+  background: #c5143e;
   width: 80px;
   height: 80px;
   border-radius: 50px;
@@ -43,7 +43,7 @@ body {
   align-items: center;
   width: 50%;
   height: 50px;
-  margin: 0 0 0 20px;
+  margin: 0 0 0 35px;
 }
 .profile-div {
   display: flex;
@@ -156,5 +156,72 @@ body {
   margin: 0;
   font-family: bebas neue;
   font-weight: 100;
-  text-shadow: 2px 2px 4px #0004;
+  text-shadow: 1px 1px 4px #0004;
+}
+/* =================== FOOT ======================= */
+
+.foot {
+  margin: 30px 14px 30px 14px;
+  background-color: #383838;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  /* flex-direction: column; */
+}
+
+.line {
+  background: #fff2;
+  width: 2px;
+  height: 90px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-left: 160px;
+}
+
+.tag {
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bottom-logo {
+  font-family: caveat;
+  font-size: 30px;
+  color: #fff9;
+  margin-bottom: 6px;
+}
+
+.bottom-logo-link {
+  text-decoration: none;
+}
+
+.my-name {
+  font-size: 20px;
+  color: #fff9;
+  font-family: tajawal;
+  font-weight: 200;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.foot-links {
+  text-decoration: none;
+  color: #fff9;
+  font-size: 18px;
+  font-family: tajawal;
+  margin-bottom: 3px;
+}
+.line-break {
+  margin-top: 60px;
 }

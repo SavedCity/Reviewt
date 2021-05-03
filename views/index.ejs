@@ -49,9 +49,11 @@
       </div>
 
 
-
+        <!-- <h1 class='top-title'>User's Reviews</h1> -->
 
       <div class="product-container">
+
+
 
         <% for (let i = 0; i < review.length; i++ ) {%>
 
@@ -59,7 +61,7 @@
           <h1><a class='name' href="/main/<%=review[i]._id%>"><%= review[i].name %></a></h1>
           <h2 class='title'><%= review[i].title %></h2>
           <div class="img-div">
-            <img class='product-img' src="<%= review[i].img %>" alt="products">
+            <a class='img-link' href="/main/<%=review[i]._id%>"> <img class='product-img' src="<%= review[i].img %>" alt="products"></a>
           </div>
           </div>
         <% } %>
@@ -70,5 +72,29 @@
 
   </body>
 
+  <hr class='line-break'>
+
+  <footer>
+
+    <div class="foot">
+
+      <div class="social">
+        <a class='foot-links' href="https://www.linkedin.com/in/andy-checo-645a77208/">LinkedIn</a>
+
+        <a class='foot-links' href="https://github.com/SavedCity">GitHub</a>
+      </div>
+
+      <div class="line">
+
+      </div>
+
+      <div class="tag">
+        <a class='bottom-logo-link' href="/main"><h3 class='bottom-logo'>ReviewT</h3></a>
+        <h3 class='my-name'><span style="font-weight: 300; color: #fff6">Developed by:</span> Andy Checo</h3>
+      </div>
+
+    </div>
+
+  </footer>
 
 </html>

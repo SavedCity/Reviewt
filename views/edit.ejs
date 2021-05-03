@@ -3,35 +3,130 @@
   <head>
     <meta charset="utf-8">
     <title>Edit Review | ReviewT</title>
+    <link rel="stylesheet" href="/css/edit.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Fredoka+One&family=Tajawal:wght@200;300;400;500;700;800;900&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+    </style>
+
+    <header>
+
+      <div class="nav">
+        <div class="title-div">
+          <h1 class= 'logo'><a class='logo' href="/main">ReviewT</a></h1>
+
+          <div class="home-div">
+
+          <a class='home' href="/main"> <img class='house' src="https://www.global-student.com/wp-content/uploads/2018/12/house-icon.png" alt=""></a>
+          <a class='home-link' href="/main"><h3 class='home-word'>HOME</h3></a>
+
+          </div>
+
+        </div>
+
+        <div class="profile-div">
+          <form action="/sessions?_method=DELETE" method="post">
+            <input type="submit" name="" value="Log Out" class= ''>
+          </form>
+          <h2 class= 'username-nav'><%= currentUser.username %></h2>
+          <a href="/main/profile"><img class='profile-img' src="<%= currentUser.img %>" alt="" onerror="this.src='https://unc.nc/wp-content/uploads/2020/07/Portrait_Placeholder.png'"></a>
+        </div>
+      </div>
+    </header>
+
   </head>
   <body>
-    <h1>UPDATE A PRODUCT!</h1>
 
-    <img src="<%=item.img%>" alt="">
+    <div class="page">
 
-    <form class="" action="/main/<%=item._id%>?_method=PUT" method="post">
+      <a class='back' href="/main/<%=item.id%>">⬅</a>
 
-      <input class = 'items' type="text" name='name' value="<%=item.name%>" placeholder='PRODUCT NAME *' required oninvalid="this.setCustomValidity('Product name must be 2-20 characters long')"
-      oninput="this.setCustomValidity('')" pattern="[A-Za-z\s\W+]{2,20}">
+        <div class="main-container">
 
-      <input class = 'items' type="text" name="title" value="<%=item.title%>" placeholder='TITLE *' required oninvalid="this.setCustomValidity('Title must be 5-30 characters long')"
-      oninput="this.setCustomValidity('')" pattern="[A-Za-z\s\W+]{5,30}">
-
-      <input class = 'items' type="text" name="price" value="<%=item.price%>" placeholder='PRICE'>
-
-      <input class = 'items' type="text" name="description" value="<%=item.description%>" placeholder='DESCRIPTION OF THE PRODUCT *' required oninvalid="this.setCustomValidity('Description must be 8-300 characters long')"
-      oninput="this.setCustomValidity('')" pattern="[A-Za-z\s\W+]{8,300}">
+            <h1 class='title'>Update <%=item.name%></h1>
 
 
-      <input class = 'items' type="text" name="boughtAt" value="<%=item.boughtAt%>" placeholder="PLACE OF PURCHASE *" required oninvalid="this.setCustomValidity('Place of purchase must be 2-20 characters long')"
-      oninput="this.setCustomValidity('')" pattern="[A-Za-z\s\W+]{2,20}">
 
-      <input class= 'items' type="text" name="img" value="<%=item.img%>" placeholder="IMG URL">
 
-      <h3>Recommend to a friend? <input class = 'items' type="checkbox" name="recommend" <% if (item.recommend === '✓') { %>
+      <form class="" action="/main/<%=item._id%>?_method=PUT" method="post">
+
+        <div class="container">
+
+          <div class="img-div">
+            <img class='img' src="<%=item.img%>" alt="">
+          </div>
+
+        <div class="left-div">
+
+      <input class = 'items' type="text" name='name' value="<%=item.name%>" placeholder='PRODUCT NAME' required oninvalid="this.setCustomValidity('Product name must be 2-30 characters long')"
+      oninput="this.setCustomValidity('')" pattern="[A-Za-z0-9\s\W+]{2,30}">
+
+      <input class = 'items' type="text" name="title" value="<%=item.title%>" placeholder='TITLE' required oninvalid="this.setCustomValidity('Title must be 5-35 characters long')"
+      oninput="this.setCustomValidity('')" pattern="[A-Za-z0-9\s\W+]{5,35}">
+
+      <textarea class = 'description' type="text" name="description" value="<%=item.description%>" placeholder='DESCRIPTION OF THE PRODUCT' required oninvalid="this.setCustomValidity('Description must be 8-300 characters long')"
+      oninput="this.setCustomValidity('')" pattern="[A-Za-z0-9\s\W+]{8,300}"><%=item.description%></textarea>
+
+
+      <input class = 'items' type="text" name="boughtAt" value="<%=item.boughtAt%>" placeholder="PLACE OF PURCHASE" required oninvalid="this.setCustomValidity('Place of purchase must be 2-20 characters long')"
+      oninput="this.setCustomValidity('')" pattern="[A-Za-z0-9\s\W+]{2,20}">
+
+      <div class="check-div">
+        <h3 class='check'>Recommend to a friend? </h3><input class = 'checkbox' type="checkbox" name="recommend" <% if (item.recommend === '✓') { %>
         checked
-        <% } %>></h3>
-      <input type="submit" name="" value="EDIT">
+        <% } %>>
+      </div>
+
+      <input class='submit' type="submit" name="" value="EDIT">
+
+      </div>
+
+      <div class="right-div">
+
+        <h2 class='optional'>Optional</h2>
+
+        <input class = 'items' type="text" name="price" value="$<%=item.price%>" placeholder='PRICE'>
+
+        <input class= 'items' type="text" name="img" value="<%=item.img%>" placeholder="IMG URL">
+
+
+
+      </div>
+
+
+
+      </div>
+
     </form>
+
+      </div>
+
+    </div>
+
   </body>
+
+  <hr class='line-break'>
+
+  <footer>
+
+    <div class="foot">
+
+      <div class="social">
+        <a class='foot-links' href="https://www.linkedin.com/in/andy-checo-645a77208/">LinkedIn</a>
+
+        <a class='foot-links' href="https://github.com/SavedCity">GitHub</a>
+      </div>
+
+      <div class="line">
+
+      </div>
+
+      <div class="tag">
+        <a class='bottom-logo-link' href="/main"><h3 class='bottom-logo'>ReviewT</h3></a>
+        <h3 class='my-name'><span style="font-weight: 300; color: #fff6">Developed by:</span> Andy Checo</h3>
+      </div>
+
+    </div>
+
+  </footer>
+
 </html>

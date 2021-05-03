@@ -59,9 +59,23 @@ product.get("/users", (req, res) => {
   User.find({}, (err, findAll) => {
     res.render("all-users.ejs", {
       user: findAll,
+      currentUser: req.session.currentUser,
     });
   });
 });
+
+// // ===============================
+// // ======== USERS SHOW ===========
+// // ===============================
+// product.get("/:id", (req, res) => {
+//   User.findById(req.params.id, (err, found) => {
+//     res.render("users-show.ejs", {
+//       users: found,
+//       user: req.session.currentUser,
+//     });
+//   });
+// });
+
 // ===============================
 // ======== EDIT =================
 // ===============================
@@ -69,6 +83,7 @@ product.get("/:id/edit", (req, res) => {
   Review.findById(req.params.id, (err, foundReview) => {
     res.render("edit.ejs", {
       item: foundReview,
+      currentUser: req.session.currentUser,
     });
   });
 });

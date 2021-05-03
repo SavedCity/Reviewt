@@ -3,11 +3,90 @@
   <head>
     <meta charset="utf-8">
     <title>ReviewT Users | ReviewT</title>
+    <link rel="stylesheet" href="/css/users.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+    </style>
   </head>
+
+  <header>
+
+    <div class="nav">
+      <div class="title-div">
+        <h1 class= 'logo'><a class='logo' href="/main">ReviewT</a></h1>
+      </div>
+
+      <div class="profile-div">
+        <form action="/sessions?_method=DELETE" method="post">
+          <input type="submit" name="" value="Log Out" class= ''>
+        </form>
+        <h2 class= 'username-nav'><%= currentUser.username %></h2>
+        <a href="/main/profile"><img class='profile-img' src="<%= currentUser.img %>" alt="" onerror="this.src='https://unc.nc/wp-content/uploads/2020/07/Portrait_Placeholder.png'"></a>
+      </div>
+    </div>
+  </header>
+
   <body>
+
+  <div class="page">
+
+    <a class='back' href="/main">⬅</a>
+
+    <div class="container">
+
+      <h2 class='title'>ReviewT Users</h2>
+
+
+
+    <div class="main-container">
+
     <% for (let i = 0; i < user.length; i++) { %>
-      <a href="#"><%=user[i].username%></a>
-      <img src="<%=user[i].img%>" alt="" onerror="this.src='https://unc.nc/wp-content/uploads/2020/07/Portrait_Placeholder.png'">
+
+        <div class="small-div">
+          <a class='username' href="<%user[i].id%>"><%=user[i].username%></a>
+
+          <div class="img-div">
+            <a class='img-link' href="<%user[i].username%>"><img class='users-img' src="<%=user[i].img%>" alt="User Image" onerror="this.src='https://unc.nc/wp-content/uploads/2020/07/Portrait_Placeholder.png'"></a>
+          </div>
+
+        </div>
+
+
     <% } %>
+
+    </div>
+
+    </div>
+
+  </div>
+
+
+
   </body>
+
+  <hr class='line-break'>
+
+  <footer>
+
+    <div class="foot">
+
+      <div class="social">
+        <a class='foot-links' href="https://www.linkedin.com/in/andy-checo-645a77208/">LinkedIn</a>
+
+        <a class='foot-links' href="https://github.com/SavedCity">GitHub</a>
+      </div>
+
+      <div class="line">
+
+      </div>
+
+      <div class="tag">
+        <a class='bottom-logo-link' href="/main"><h3 class='bottom-logo'>ReviewT</h3></a>
+        <h3 class='my-name'><span style="font-weight: 300; color: #fff6">Developed by:</span> Andy Checo</h3>
+      </div>
+
+    </div>
+
+  </footer>
+
 </html>
