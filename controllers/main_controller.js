@@ -102,10 +102,13 @@ product.get("/:id/edit", (req, res) => {
 // ======== INDEX ================
 // ===============================
 product.get("/", authenticated, (req, res) => {
-  Review.find({}, (err, findAll) => {
-    res.render("index.ejs", {
-      review: findAll,
-      currentUser: req.session.currentUser,
+  User.find({}, (err, allUsers) => {
+    Review.find({}, (err, findAll) => {
+      res.render("index.ejs", {
+        review: findAll,
+        currentUser: req.session.currentUser,
+        user: allUsers,
+      });
     });
   });
 });

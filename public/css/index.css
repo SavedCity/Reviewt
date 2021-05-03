@@ -31,7 +31,13 @@
   font-family: caveat;
   text-shadow: 0px 0px 5px yellow;
 }
-
+.logo-after {
+  font-size: 50px;
+  text-decoration: none;
+  color: white;
+  font-family: caveat;
+  text-shadow: 0px 0px 5px #0005;
+}
 .title-div {
   display: flex;
   align-content: center;
@@ -93,7 +99,7 @@
   margin-right: 17px;
   background: white;
   border-radius: 8px;
-  height: 300px;
+  height: 380px;
   padding: 10px 0;
   box-shadow: 0 0 10px 2px #0003;
   transition: 0.3s ease-in-out;
@@ -107,7 +113,7 @@
   margin-right: 17px;
   background: #0009;
   border-radius: 8px;
-  height: 300px;
+  height: 380px;
   padding: 10px 0;
   box-shadow: 0 0 10px 2px #0003;
 }
@@ -141,6 +147,51 @@
 }
 .side-links-after:hover {
   background: #fff5;
+}
+
+.latest {
+  margin-bottom: 5px;
+  margin-top: 28px;
+  font-size: 28px;
+  font-family: tajawal;
+  font-weight: 800;
+}
+
+.latest-after {
+  margin-bottom: 5px;
+  margin-top: 28px;
+  font-size: 28px;
+  font-family: tajawal;
+  font-weight: 800;
+  color: #fff;
+}
+
+.side-users {
+  text-decoration: none;
+  margin: 5px 10px;
+  font-size: 22px;
+  color: black;
+  padding: 0px 10px;
+  padding-top: 10px;
+  border-radius: 3px;
+  transition: 0.3s ease-in-out;
+  font-family: tajawal;
+  background: #ffe62e99;
+}
+.side-users-after {
+  text-decoration: none;
+  margin: 5px 10px;
+  font-size: 22px;
+  color: #000;
+  padding: 0px 10px;
+  padding-top: 10px;
+  border-radius: 3px;
+  transition: 0.3s ease-in-out;
+  font-family: tajawal;
+  background: #fff9;
+}
+.side-users:hover {
+  background: #ffe62e;
 }
 .product-container {
   display: flex;
@@ -274,13 +325,14 @@
 }
 .name-after {
   text-decoration: none;
-  color: #1dd5fd;
+  color: #000;
   font-family: bebas neue;
   letter-spacing: 1px;
-  padding: 3px 10px 0 10px;
+  padding: 3px 6px 0 6px;
   border-radius: 4px;
   transition: 0.2s ease-in-out;
   font-size: 30px;
+  background: #fff8;
 }
 .name:hover {
   background: #5552;

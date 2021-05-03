@@ -25,14 +25,34 @@
               <input class='items' type="text" name="name" placeholder="NAME *" required oninvalid="this.setCustomValidity('Enter your name')"
               oninput="this.setCustomValidity('')"/>
 
+              <label for="img"></label>
+              <input class='items' type="text" name="img" placeholder="PROFILE PIC"
+              />
+
               <textarea placeholder="TELL US SOMETHING (OR A FEW THNGS) ABOUT YOURSELF *" class='about' name="about" required oninvalid="this.setCustomValidity('This field is required')"
               oninput="this.setCustomValidity('')" pattern="[A-Za-z0-9\s\W+]{8,300}"></textarea>
 
-              <label for="img"></label>
-              <input class='items' type="text" name="img" placeholder="PROFILE PIC"
-             />
 
-
+              <select name="favStore" class="items">
+                <option value="WASN'T LISTED">NOT LISTED</option>
+                <option value="Target">Target</option>
+                <option value="Amazon">Amazon</option>
+                <option value="Best Buy">Best Buy</option>
+                <option value="Walmart">Walmart</option>
+                <option value="Costco">Costco</option>
+                <option value="The Home Depot">The Home Depot</option>
+                <option value="Apple">Apple</option>
+                <option value="TJX Companies">TJX Companies</option>
+                <option value="Rite Aid">Rite Aid</option>
+                <option value="Nordstorm">Nordstorm</option>
+                <option value="AutoZone">AutoZone</option>
+                <option value="Petsmart">Petsmart</option>
+                <option value="Staples">Staples</option>
+                <option value="GamesStop">GamesStop</option>
+                <option value="Foot Locker">Foot Locker</option>
+                <option value="Hobby Lobby">Hobby Lobby</option>
+                <option value="Anything Online">Anything Online</option>
+              </select>
 
               <label for="name"></label>
               <input placeholder="USERNAME *" class='items' type="text" name="username" required oninvalid="this.setCustomValidity('User name must be 2-15 characters long with no symbols')"

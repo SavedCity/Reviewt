@@ -1,6 +1,32 @@
 body {
   background: #4169e299;
 }
+.home-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.home-link {
+  text-decoration: none;
+}
+.home-word {
+  margin: 15px 0 0 5px;
+  font-size: 28px;
+  font-family: fredoka one;
+  color: #fff7;
+}
+.home {
+  text-decoration: none;
+}
+
+.house {
+  width: 43px;
+  opacity: 0.5;
+  /* transition: 0.3s ease-in-out; */
+  margin: 10px 0 0px 50px;
+}
+
 .logout {
   padding: 5px 10px;
   margin-right: 50px;
@@ -300,4 +326,75 @@ body {
 }
 .line-break {
   margin-top: 60px;
+}
+
+/* ===================== STAR RATING SYSTEM =================== */
+
+.star-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+  margin-bottom: 100px;
+}
+
+.rating-wrap {
+  max-width: 480px;
+  margin: auto;
+  padding: 15px;
+  box-shadow: 0 0 3px #0005;
+  text-align: center;
+}
+
+.center {
+  width: 230px;
+  margin: auto;
+}
+
+#rating-value {
+  margin: 40px auto 0;
+  width: 110px;
+  padding: 10px 5px;
+  text-align: center;
+  box-shadow: 0 0 2px 1px #0005;
+}
+.raing {
+  border: none;
+  float: left;
+}
+.rating > input {
+  display: none;
+}
+.rating > label::before {
+  content: "\f005";
+  margin: 5px;
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.5rem;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.rating > .half::before {
+  content: "\f089";
+  position: absolute;
+  cursor: pointer;
+}
+
+.rating > label {
+  color: #ddd;
+  float: right;
+  cursor: pointer;
+}
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #ffe62e;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+  color: #ffe62e;
 }

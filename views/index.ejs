@@ -51,6 +51,13 @@
         <a class = 'side-links' href="/main/profile">MY PROFILE</a>
         <a class = 'side-links' href="/main/new">POST</a>
         <a class = 'side-links' href="/main/users">REVIEWT USERS</a>
+        <h2 class='latest'>Latest Users</h2>
+
+        <a class='side-users' href="/main/show/<%=user[user.length -1].id%>"><%=user[user.length -1].username%></a>
+        <a class='side-users' href="/main/show/<%=user[user.length -2].id%>"><%=user[user.length -2].username%></a>
+        <a class='side-users' href="/main/show/<%=user[user.length -3].id%>"><%=user[user.length -3].username%></a>
+
+
       </div>
 
 
@@ -112,6 +119,9 @@
         $('.product-container').toggleClass('product-container-after')
         $('.side-container').toggleClass('side-container-after')
         $('.side-links').toggleClass('side-links-after')
+        $('.side-users').toggleClass('side-users-after')
+        $('.latest').toggleClass('latest-after')
+        $('.logo').toggleClass('logo-after')
         $('.name').toggleClass('name-after')
         $('.title').toggleClass('title-after')
         $('.body').toggleClass('body-after')
@@ -124,6 +134,9 @@
         $('.product-container').removeClass('product-container-after')
         $('.side-container').removeClass('side-container-after')
         $('.side-links').removeClass('side-links-after')
+        $('.side-users').toggleClass('side-users-after')
+        $('.latest').toggleClass('latest-after')
+        $('.logo').toggleClass('logo-after')
         $('.name').removeClass('name-after')
         $('.title').removeClass('title-after')
         $('.body').removeClass('body-after')
