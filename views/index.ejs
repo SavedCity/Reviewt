@@ -25,8 +25,8 @@
 
       <div class="profile-div">
 
-        <button class='dark-mode' type="button" name="button">TOGGLE DARK</button>
-        <button class='light-mode' type="button" name="button">TOGGLE DARK</button>
+        <button class='dark-mode' type="button" name="button">DARK MODE</button>
+        <button class='light-mode' type="button" name="button">LIGHT MODE</button>
 
         <form action="/sessions?_method=DELETE" method="post">
           <input type="submit" name="" value="Log Out" class= ''>
@@ -114,7 +114,20 @@
         $('.name').toggleClass('name-after')
         $('.title').toggleClass('title-after')
         $('.body').toggleClass('body-after')
-        $('.dark-mode').hide()
+        $('.post').toggleClass('post-after')
+        $('.light-mode').toggleClass('light-mode-after')
+        $('.dark-mode').toggleClass('dark-mode-after')
+      })
+
+      $('.light-mode').on('click', () => {
+        $('.product-container').removeClass('product-container-after')
+        $('.side-container').removeClass('side-container-after')
+        $('.side-links').removeClass('side-links-after')
+        $('.name').removeClass('name-after')
+        $('.title').removeClass('title-after')
+        $('.body').removeClass('body-after')
+        $('.post').removeClass('post-after')
+        $('.dark-mode').toggleClass('dark-mode-after')
         $('.light-mode').toggleClass('light-mode-after')
       })
 
