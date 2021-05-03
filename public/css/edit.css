@@ -1,6 +1,23 @@
 body {
   background: #fff;
 }
+.logout {
+  padding: 5px 10px;
+  margin-right: 50px;
+  margin-left: 10px;
+  background: none;
+  color: #f44;
+  border: none;
+  font-size: 35px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: fontawesome;
+}
+.logout:hover {
+  background: #f557;
+  color: #fff;
+}
 .logo {
   font-size: 50px;
   text-decoration: none;
@@ -49,7 +66,7 @@ body {
   align-items: center;
   align-content: center;
   width: 50%;
-  margin-right: 20px;
+  margin-right: 40px;
   padding: 0;
   /* height: 60px; */
 }
@@ -57,8 +74,10 @@ body {
 .username-nav {
   font-size: 30px;
   margin-right: 15px;
-  color: #fff9;
+  color: #fff;
   margin: 0 15px 0 0;
+  font-family: Yanone Kaffeesatz;
+  letter-spacing: 2px;
 }
 
 .nav {

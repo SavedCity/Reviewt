@@ -1,7 +1,23 @@
 body {
   background: #ffd90d99;
 }
-
+.logout {
+  padding: 5px 10px;
+  margin-right: 50px;
+  margin-left: 10px;
+  background: none;
+  color: #f44;
+  border: none;
+  font-size: 35px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: fontawesome;
+}
+.logout:hover {
+  background: #f557;
+  color: #fff;
+}
 .logo {
   font-size: 50px;
   text-decoration: none;
@@ -40,6 +56,8 @@ body {
   margin-right: 15px;
   color: #fff;
   margin: 0 15px 0 0;
+  font-family: Yanone Kaffeesatz;
+  letter-spacing: 2px;
 }
 
 .nav {

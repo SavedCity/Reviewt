@@ -7,6 +7,7 @@
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Fredoka+One&family=Tajawal:wght@200;300;400;500;700;800;900&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
     </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   </head>
 
   <header>
@@ -26,7 +27,7 @@
 
       <div class="profile-div">
         <form action="/sessions?_method=DELETE" method="post">
-          <input type="submit" name="" value="Log Out" class= ''>
+          <button  class='logout' type="submit" name=""><i class="fas fa-sign-out-alt"></i></button>
         </form>
         <h2 class= 'username-nav'><%= profile.username %></h2>
         <a href="/main/profile"><img class='profile-img' src="<%= profile.img %>" alt="" onerror="this.src='https://unc.nc/wp-content/uploads/2020/07/Portrait_Placeholder.png'"></a>
