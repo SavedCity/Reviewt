@@ -3,6 +3,7 @@ const Review = require("../models/items-schema.js");
 const User = require("../models/signin-schema.js");
 const Reviews = require("../models/reviews.js");
 const product = express.Router();
+const bcrypt = require("bcrypt");
 
 // ===== AUTHENTICATION ==========
 // ===============================
@@ -58,8 +59,11 @@ product.post("/", (req, res) => {
 // ======== PROFILE ==============
 // ===============================
 product.get("/profile", (req, res) => {
-  res.render("profile.ejs", {
-    profile: req.session.currentUser,
+  User.find({}, (err, found) => {
+    res.render("profile.ejs", {
+      profile: req.session.currentUser,
+      user: found,
+    });
   });
 });
 
@@ -68,9 +72,12 @@ product.get("/profile", (req, res) => {
 // ===============================
 product.get("/users", (req, res) => {
   User.find({}, (err, findAll) => {
-    res.render("all-users.ejs", {
-      user: findAll,
-      currentUser: req.session.currentUser,
+    Review.find({}, (err, findReview) => {
+      res.render("all-users.ejs", {
+        user: findAll,
+        currentUser: req.session.currentUser,
+        review: findReview,
+      });
     });
   });
 });
@@ -90,9 +97,12 @@ product.get("/:id", (req, res) => {
 // ===============================
 product.get("/show/:id", (req, res) => {
   User.findById(req.params.id, (err, found) => {
-    res.render("users-show.ejs", {
-      profile: found,
-      user: req.session.currentUser,
+    Review.find({}, (err, findReview) => {
+      res.render("users-show.ejs", {
+        profile: found,
+        user: req.session.currentUser,
+        review: findReview,
+      });
     });
   });
 });
@@ -104,6 +114,17 @@ product.get("/:id/edit", (req, res) => {
   Review.findById(req.params.id, (err, foundReview) => {
     res.render("edit.ejs", {
       item: foundReview,
+      currentUser: req.session.currentUser,
+    });
+  });
+});
+// ===============================
+// ======== EDIT USER ============
+// ===============================
+product.get("/users/:id/edit", (req, res) => {
+  User.findById(req.params.id, (err, found) => {
+    res.render("edit-users.ejs", {
+      user: found,
       currentUser: req.session.currentUser,
     });
   });
@@ -123,6 +144,7 @@ product.get("/", authenticated, (req, res) => {
     });
   });
 });
+
 // ===============================
 // ======== DELETE ===============
 // ===============================
@@ -134,6 +156,24 @@ product.delete("/:id", (req, res) => {
       console.log(remove);
     }
     res.redirect("/main");
+  });
+});
+
+// ===============================
+// ======== UPDATE ===============
+// ===============================
+product.put("/users/:id", (req, res) => {
+  req.body.password = bcrypt.hashSync(
+    req.body.password,
+    bcrypt.genSaltSync(10)
+  );
+  User.findByIdAndUpdate(req.params.id, req.body, (err, update) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(update);
+      res.redirect("/main/show/" + req.params.id);
+    }
   });
 });
 

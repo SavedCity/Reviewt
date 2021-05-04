@@ -19,7 +19,7 @@
         <div class="home-div">
 
         <a class='home' href="/main"> <img class='house' src="https://www.global-student.com/wp-content/uploads/2018/12/house-icon.png" alt=""></a>
-        <a class='home-link' href="/main"><h3 class='home-word'>HOME</h3></a>
+        <a class='home-link'><h3 class='home-word'>HOME</h3></a>
 
         </div>
 
@@ -39,7 +39,7 @@
 
     <div class="page">
 
-    
+
 
       <div class="container">
         <h2 class='title'>Reviewt Profile</h2>
@@ -56,12 +56,20 @@
               <h3 class='name'><%=profile.favStore%></h3>
             </div>
 
+              <% if (user.username === profile.username) {%>
+
+            <a class="edit" href="/main/users/<%=profile.id%>/edit">UPDATE PROFILE</a>
+
+            <% } %>
+
         </div>
 
         <div class="about-div">
           <h2 class='about-title'>About <%=profile.name%>:</h2>
           <h2 class='about'><%=profile.about%></h2>
         </div>
+
+
 
       </div>
 
