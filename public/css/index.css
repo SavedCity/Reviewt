@@ -4,9 +4,10 @@
 
 .by {
   font-size: 15px;
-  margin: 7px 55px 0 0;
+  /* margin: 7px 55px 0 0; */
   text-decoration: none;
   color: black;
+  margin-top: 3px;
 }
 .by-after {
   font-size: 15px;
