@@ -10,7 +10,8 @@ const itemsSchema = new Schema(
     description: { type: String, required: true, minLength: 8, maxLength: 300 },
     recommend: String,
     boughtAt: { type: String, required: true },
-    star: { type: Number, required: true },
+    star: { type: String, required: true },
+    createdBy: String,
   },
   {
     timestamp: true,

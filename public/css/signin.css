@@ -2,7 +2,7 @@ body {
   background: #2ecfaa99;
 }
 
-/* .star {
+.star {
   color: #ffe62e;
   text-shadow: 0 0 5px #000;
   position: absolute;
@@ -10,7 +10,7 @@ body {
   right: 30.7%;
   font-size: 25px;
   transform: rotate(23deg);
-} */
+}
 
 .title {
   color: #fff7f7;

@@ -54,7 +54,9 @@
         <h2 class='latest'>Latest Users</h2>
 
         <a class='side-users' href="/main/show/<%=user[user.length -1].id%>"><%=user[user.length -1].username%></a>
+
         <a class='side-users' href="/main/show/<%=user[user.length -2].id%>"><%=user[user.length -2].username%></a>
+
         <a class='side-users' href="/main/show/<%=user[user.length -3].id%>"><%=user[user.length -3].username%></a>
 
 
@@ -70,11 +72,16 @@
         <% for (let i = 0; i < review.length; i++ ) {%>
 
           <div class="items-container">
-          <h1><a class='name' href="/main/<%=review[i]._id%>"><%= review[i].name %></a></h1>
+          <h1 class='nameh1'><a class='name' href="/main/<%=review[i]._id%>"><%= review[i].name %></a></h1>
           <h2 class='title'><%= review[i].title %></h2>
+
           <div class="img-div">
             <a class='img-link' href="/main/<%=review[i]._id%>"> <img class='product-img' src="<%= review[i].img %>" alt="products"></a>
           </div>
+
+          <h2 class='star' ><%=review[i].star%></h2>
+          <a  class='by' >by <%=review[i].createdBy%></a>
+
           </div>
         <% } %>
 
@@ -122,6 +129,8 @@
         $('.side-users').toggleClass('side-users-after')
         $('.latest').toggleClass('latest-after')
         $('.logo').toggleClass('logo-after')
+        $('.by').toggleClass('by-after')
+        $('.star').toggleClass('star-after')
         $('.name').toggleClass('name-after')
         $('.title').toggleClass('title-after')
         $('.body').toggleClass('body-after')
@@ -136,6 +145,8 @@
         $('.side-links').removeClass('side-links-after')
         $('.side-users').toggleClass('side-users-after')
         $('.latest').toggleClass('latest-after')
+        $('.star').toggleClass('star-after')
+        $('.by').toggleClass('by-after')
         $('.logo').toggleClass('logo-after')
         $('.name').removeClass('name-after')
         $('.title').removeClass('title-after')

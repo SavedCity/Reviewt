@@ -39,7 +39,7 @@
 
     <div class="page">
 
-  
+
 
         <div class="main-container">
 
@@ -68,16 +68,40 @@
       oninput="this.setCustomValidity('')" pattern="[A-Za-z0-9\s\W+]{8,300}"><%=item.description%></textarea>
 
 
-      <input class = 'items' type="text" name="boughtAt" value="<%=item.boughtAt%>" placeholder="PLACE OF PURCHASE" required oninvalid="this.setCustomValidity('Place of purchase must be 2-20 characters long')"
-      oninput="this.setCustomValidity('')" pattern="[A-Za-z0-9\s\W+]{2,20}">
+      <input class = 'items' type="text" name="boughtAt" value="<%=item.boughtAt%>" placeholder="PLACE OF PURCHASE" required oninvalid="this.setCustomValidity('Place of purchase must be 2-15 characters long')"
+      oninput="this.setCustomValidity('')" pattern="[A-Za-z0-9\s\W+]{2,15}">
 
       <div class="check-div">
-        <h3 class='check'>Recommend to a friend? </h3><input class = 'checkbox' type="checkbox" name="recommend" <% if (item.recommend === '✓') { %>
+        <h3 class='check'>I'D BUY AGAIN </h3><input class = 'checkbox' type="checkbox" name="recommend" <% if (item.recommend === '✓') { %>
         checked
         <% } %>>
       </div>
 
+      <div class="star-container">
+        <div class="rating-wrap">
+          <div class="center">
+            <fieldset class='rating'>
+              <input class='rate'  type="radio" id='star5' name="star" value='5' ><label for="star5" class="full" title="AWESOME"></label>
+
+              <input class='rate' type="radio" id='star4' name="star" value='4'><label for="star4" class="full" title="GOOD"></label>
+
+              <input class='rate' type="radio" id='star3' name="star" value='3'><label for="star3" class="full" title="OKAY"></label>
+
+              <input class='rate' type="radio" id='star2' name="star" value='2'><label for="star2" class="full" title="MEH"></label>
+
+              <input class='rate' type="radio" id='star1' name="star" value='1'><label for="star1" class="full" title="SUCKS"></label>
+
+            </fieldset>
+          </div>
+          <h2 id="rating-value">0</h2>
+        </div>
+
+
+
+      </div>
+
       <input class='submit' type="submit" name="" value="EDIT">
+      <a href="/main/<%=item._id%>" class="cancel" type="button" name="button">CANCEL</a>
 
       </div>
 
@@ -127,5 +151,22 @@
     </div>
 
   </footer>
+
+  <script type="text/javascript">
+
+    let star = document.querySelectorAll('.rate');
+
+    let showValue = document.querySelector('#rating-value');
+
+    for (let i = 0; i < star.length; i++) {
+      star[i].addEventListener('click', function() {
+        i = this.value;
+
+        showValue.innerHTML = i + ' out of 5';
+      });
+    }
+
+
+  </script>
 
 </html>

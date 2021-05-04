@@ -33,6 +33,17 @@ product.post("/", (req, res) => {
     req.body.img =
       "https://scontent-hou1-1.xx.fbcdn.net/v/t1.6435-9/182162048_3761943260526172_6849399484459786889_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=730e14&_nc_ohc=bcwo2p7IO90AX_2bMxC&_nc_ht=scontent-hou1-1.xx&oh=66b18e80287cc602dcf5ccda93b3035e&oe=60B6C7FF";
   }
+  if (req.body.star === "1") {
+    req.body.star = "★☆☆☆☆";
+  } else if (req.body.star === "2") {
+    req.body.star = "★★☆☆☆";
+  } else if (req.body.star === "3") {
+    req.body.star = "★★★☆☆";
+  } else if (req.body.star === "4") {
+    req.body.star = "★★★★☆";
+  } else if (req.body.star === "5") {
+    req.body.star = "★★★★★";
+  }
   Review.create(req.body, (err, createdReview) => {
     if (createdReview === undefined) {
       res.redirect("/main/new");
@@ -134,6 +145,17 @@ product.put("/:id", (req, res) => {
     req.body.recommend = "✓";
   } else {
     req.body.recommend = "✕";
+  }
+  if (req.body.star === "1") {
+    req.body.star = "★☆☆☆☆";
+  } else if (req.body.star === "2") {
+    req.body.star = "★★☆☆☆";
+  } else if (req.body.star === "3") {
+    req.body.star = "★★★☆☆";
+  } else if (req.body.star === "4") {
+    req.body.star = "★★★★☆";
+  } else if (req.body.star === "5") {
+    req.body.star = "★★★★★";
   }
   Review.findByIdAndUpdate(req.params.id, req.body, (err, update) => {
     if (err) {
