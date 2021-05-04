@@ -86,7 +86,7 @@ legend {
 }
 .items:hover {
   background: #0007;
-  width: 270px;
+  /* width: 270px; */
 }
 .about {
   border: none;

@@ -11,9 +11,10 @@
 }
 .by-after {
   font-size: 15px;
-  margin: 7px 55px 0 0;
+  /* margin: 7px 55px 0 0; */
   text-decoration: none;
   color: white;
+  margin-top: 3px;
 }
 
 .logout {
