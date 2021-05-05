@@ -115,10 +115,16 @@
           <input value="" class = 'items' type="text" name="price" placeholder='PRICE (include "$")' oninvalid="this.setCustomValidity('Must only be numbers')"
           oninput="this.setCustomValidity('')" pattern="[0-9\W]{0,20}">
 
-          <input class='items' type="text" name="img" placeholder="IMG URL" >
+
+          <input id="myfile" onchange="onImageChange()" class='items' type="text"  placeholder="IMG URL" >
 
           <input type="hidden" name="createdBy" value="<%=currentUser.username%>">
 
+          </div>
+
+          <div class="img-container">
+            <img id="profile-img" src="" alt="">
+            <input id="hidden-img" type="hidden" name="img" value="">
           </div>
 
           </div>
@@ -170,6 +176,19 @@
       });
     }
 
+      const toBase64 = file => new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = error => reject(error);
+    });
+
+    async function onImageChange() {
+   const file = document.querySelector('#myfile').value;
+   // console.log(await toBase64(file));
+   document.getElementById('profile-img').src = file;
+   document.getElementById('hidden-img').value = file;
+  }
 
   </script>
 
