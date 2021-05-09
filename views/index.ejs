@@ -40,6 +40,8 @@
 
     <body class='body'>
 
+
+
     <div class="page">
 
       <!-- <a href="/authors">AUTHORS</a>
@@ -63,27 +65,49 @@
       </div>
 
 
-        <!-- <h1 class='top-title'>User's Reviews</h1> -->
-
       <div class="product-container">
 
 
+          <% const data = review %>
 
-        <% for (let i = review.length - 1; i >= 0; i--) { %>
+          <%  function dynamicSort(property) {
+        let sortOrder = 0;
+        if(property[0] === "-") {
+            sortOrder = -1;
+            property = property.substr(1);
+        }
+        return function (a,b) {
+            var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+            return result * sortOrder;
+          }
+        } %>
+        <% data.sort(dynamicSort('-createdAt')) %>
 
-          <div class="items-container">
-          <h1 class='nameh1'><a class='name' href="/main/<%=review[i]._id%>"><%= review[i].name %></a></h1>
-          <h2 class='title'><%= review[i].title %></h2>
 
-          <div class="img-div">
-            <a class='img-link' href="/main/<%=review[i]._id%>"> <img class='product-img' src="<%= review[i].img %>" alt="products"></a>
-          </div>
+        <!-- <button onClick="data.sort(dynamicSort('-createdAt'))" type="button" name="button"> SORT </button> -->
 
-          <h2 class='star' ><%=review[i].star%></h2>
-          <a  class='by' >by <%=review[i].createdBy%></a>
 
-          </div>
-        <% } %>
+
+          <% for (let i = 0; i < data.length; i++) { %>
+
+
+
+            <div class="items-container">
+            <h1 class='nameh1'><a class='name' href="/main/<%=data[i]._id%>"><%= data[i].name %></a></h1>
+            <h2 class='title'><%= data[i].title %></h2>
+
+            <div class="img-div">
+              <a class='img-link' href="/main/<%=data[i]._id%>"> <img class='product-img' src="<%= data[i].img %>" alt="products"></a>
+            </div>
+
+            <h2 class='star' ><%=data[i].star%></h2>
+            <a  class='by' >by <%=data[i].createdBy%></a>
+
+            </div>
+
+
+          <% } %>
+
 
       </div>
 
