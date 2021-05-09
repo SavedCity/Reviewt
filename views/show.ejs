@@ -44,14 +44,35 @@
 
 
       <div class="main-container">
-        <!-- <div class="img-container"> -->
           <img class='item-img' src="<%=item.img%>" alt="">
-        <!-- </div> -->
 
 
         <div class="container">
           <h1 class = 'name'><%=item.name%></h1>
           <h1 class = 'by'>Reviewt by <%=item.createdBy%></h1>
+
+          <!-- ============ TIMESTAMPS ============ -->
+          <% let created = item.createdAt; %>
+
+          <% let month = ("0" + (created.getMonth() + 1)).slice(-2); %>
+
+          <% let date = ("0" + created.getDate()).slice(-2); %>
+
+          <% let year = created.getFullYear(); %>
+
+          <% let hours = created.getHours(); %>
+
+          <% let minutes = created.getMinutes();
+          if (minutes < 10) {
+            minutes = '0' + minutes
+          } else {
+            minutes
+          } %>
+
+          <% let AmOrPm = hours >= 12 ? 'PM' : 'AM'; %>
+          <% hours = (hours % 12 || 12) %>
+
+          <h1 class = 'time'><%= date + '/' + month + '/' + year + ' at ' + hours + ':' + minutes + ' ' + AmOrPm %></h1>
 
 
           <div class="item-container">

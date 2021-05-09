@@ -111,11 +111,14 @@
 
         <input class = 'items' type="text" name="price" value="<%=item.price%>" placeholder='PRICE'>
 
-        <input class= 'items' type="text" name="img" value="<%=item.img%>" placeholder="IMG URL">
+        <input id='myfile' onChange='onImageChange()' class= 'items' type="text" value="<%=item.img%>" placeholder="IMG URL">
 
+        <div class="img-container">
+          <img id="profile-img" src="" alt="">
+          <input id="hidden-img" type="hidden" name="img" value="">
+        </div>
 
       </div>
-
 
       </div>
 
@@ -164,6 +167,20 @@
 
         showValue.innerHTML = i + ' out of 5';
       });
+    }
+
+        const toBase64 = file => new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = error => reject(error);
+      });
+
+      async function onImageChange() {
+     const file = document.querySelector('#myfile').value;
+     // console.log(await toBase64(file));
+     document.getElementById('profile-img').src = file;
+     document.getElementById('hidden-img').value = file;
     }
 
 

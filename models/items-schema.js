@@ -14,7 +14,7 @@ const itemsSchema = new Schema(
     createdBy: String,
   },
   {
-    timestamp: true,
+    timestamps: true,
   }
 );
 
