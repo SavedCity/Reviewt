@@ -4,6 +4,7 @@ const User = require("../models/signin-schema.js");
 const Reviews = require("../models/reviews.js");
 const product = express.Router();
 const bcrypt = require("bcrypt");
+const defaultImg = "../images/logo.png";
 
 // ===== AUTHENTICATION ==========
 // ===============================
@@ -31,8 +32,7 @@ product.post("/", (req, res) => {
     req.body.recommend = "✕";
   }
   if (req.body.img === "") {
-    req.body.img =
-      "https://scontent-hou1-1.xx.fbcdn.net/v/t1.6435-9/182162048_3761943260526172_6849399484459786889_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=730e14&_nc_ohc=bcwo2p7IO90AX_2bMxC&_nc_ht=scontent-hou1-1.xx&oh=66b18e80287cc602dcf5ccda93b3035e&oe=60B6C7FF";
+    req.body.img = defaultImg;
   }
   if (req.body.star === "1") {
     req.body.star = "★☆☆☆☆";
