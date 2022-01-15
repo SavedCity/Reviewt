@@ -1,9 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <title>Reviewt | Sign-In</title>
+    <link rel="stylesheet" href="/css/signin.css" />
+    <link rel="icon" type="image/x-icon" href="/images/yellow-star.png" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap");
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      charset="utf-8"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <div class="main-container">
+      <div class="mid-container">
+        <h5 class="star">★★★★☆</h5>
+        <h1 class="title">Reviewt</h1>
+        <form id="form" action="/sessions" method="POST">
+          <div class="container">
+            <label for="username"></label>
+            <input
+              id="user-field"
+              placeholder="USERNAME"
+              class="fields"
+              type="text"
+              name="username"
+              required
+              oninvalid="this.setCustomValidity('Please enter your username!')"
+              oninput="this.setCustomValidity('')"
+            />
+
+            <label for="password"></label>
+            <input
+              id="pass-field"
+              class="fields"
+              type="password"
+              name="password"
+              placeholder="PASSWORD"
+              required
+              oninvalid="this.setCustomValidity('Please enter your password!')"
+              oninput="this.setCustomValidity('')"
+            />
+
+            <input class="submit" type="submit" value="LOG IN" />
+          </div>
+        </form>
+
+        <h3 class="signup">Not a Reviewt member?</h3>
+
+        <a class="link" href="/users/signup">SIGN UP</a>
+        <div>
+          <button class="guest-btn">GUEST SIGN IN</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    $(() => {
+      $(".guest-btn").on("click", () => {
+        console.log("works");
+        $("#user-field").val("Anonymous");
+        $("#pass-field").val("test123");
+        $("#form").submit();
+      });
+    });
+  </script>
 </html>
