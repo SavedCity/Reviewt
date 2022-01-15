@@ -6,8 +6,8 @@ body {
   color: #ffe62e;
   text-shadow: 0 0 5px #000;
   position: absolute;
-  top: 7.5%;
-  left: 24%;
+  top: -15px;
+  left: 10px;
   font-size: 30px;
   transform: rotate(-23deg);
 }
@@ -41,6 +41,7 @@ body {
   border-radius: 15px;
   margin-top: 0px;
   box-shadow: 0 0 25px 10px #0005;
+  position: relative;
 }
 
 .container {

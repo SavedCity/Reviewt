@@ -6,8 +6,8 @@ body {
   color: #ffe62e;
   text-shadow: 0 0 5px #000;
   position: absolute;
-  top: 12%;
-  right: 30.7%;
+  top: -10px;
+  right: 10px;
   font-size: 25px;
   transform: rotate(23deg);
 }
@@ -41,6 +41,7 @@ body {
   border-radius: 15px;
   margin-top: 6.5%;
   box-shadow: 0 0 25px 10px #0005;
+  position: relative;
 }
 .container {
   display: flex;
@@ -51,6 +52,7 @@ body {
 }
 
 .fields {
+  padding-left: 10px;
   border: none;
   background: #fff2;
   margin-bottom: 12px;
@@ -58,7 +60,7 @@ body {
   width: 220px;
   color: white;
   border-radius: 4px;
-  font-size: 23px;
+  font-size: 20px;
   outline: none;
   /* box-shadow: 0 0 10px white; */
   transition: 0.3s ease-in-out;
@@ -74,12 +76,13 @@ body {
   background: #bdb200;
   border: none;
   margin-top: 10px;
-  width: 220px;
+  width: 232px;
   transition: 0.3s ease-in-out;
   cursor: pointer;
+  font-weight: 600;
 }
 .submit:hover {
-  width: 240px;
+  width: 252px;
   background: #ffe200;
   font-size: 25px;
 }
@@ -106,4 +109,22 @@ body {
 ::placeholder {
   color: #fff9;
   padding-left: 10px;
+}
+
+.guest-btn {
+  /* color: #fff; */
+  padding: 10px 20px;
+  width: 20vw;
+  border-radius: 4px;
+  font-size: 17px;
+  background: #ddd;
+  border: none;
+  margin-top: 10px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.guest-btn:hover {
+  background-color: #fff;
 }
