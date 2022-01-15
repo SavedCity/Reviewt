@@ -75,9 +75,9 @@ app.use("/authors", authorsController);
 // Routes
 //___________________
 // localhost: 3000;
-// app.get("/", (req, res) => {
-//   res.send("Hello sir!");
-// });
+app.get("/", (req, res) => {
+  res.send("Hello sir!");
+});
 
 //___________________
 //Listener
