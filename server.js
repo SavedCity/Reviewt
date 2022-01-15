@@ -60,7 +60,7 @@ app.use(
 // ========= CONTROLLERS ========
 // ==============================
 const productController = require("./controllers/main_controller.js");
-app.use("/main", productController);
+app.use("/", productController);
 
 const userController = require("./controllers/users_controller.js");
 app.use("/users", userController);
